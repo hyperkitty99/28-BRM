@@ -1,10 +1,25 @@
 {
-	"songs": [
-		["Russophobia", "iccer", [168, 199, 217]]
-	],
+	"weekFile": "week1",
 	"storyName": "poop",
-	"weekName": "Russophobia",
+	"hideFreeplay": false,
+	"weekBackground": "",
 	"startUnlocked": true,
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Russophobia",
+			"iccer",
+			[
+				168,
+				199,
+				217
+			]
+		]
+	],
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"weekName": "week1"
 }
