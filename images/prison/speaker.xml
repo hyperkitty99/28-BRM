@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="speaker.png" width="698" height="579">
+	<SubTexture name="speaker0000" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0001" x="2" y="2" width="286" height="411" rotated="true" frameX="-0" frameY="-1" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0002" x="2" y="2" width="286" height="411" rotated="true" frameX="-0" frameY="-1" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0003" x="290" y="287" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0004" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0005" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0006" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0007" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0008" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0009" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0010" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0011" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0012" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0013" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0014" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0015" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0016" x="2" y="2" width="286" height="411" rotated="true" frameX="-0" frameY="-1" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0017" x="2" y="2" width="286" height="411" rotated="true" frameX="-0" frameY="-1" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0018" x="290" y="287" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0019" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0020" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0021" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0022" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0023" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0024" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0025" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0026" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0027" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0028" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+	<SubTexture name="speaker0029" x="290" y="2" width="408" height="283" frameX="-0" frameY="-5" frameWidth="411" frameHeight="288"/>
+</TextureAtlas>

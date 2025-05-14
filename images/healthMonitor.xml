@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="healthMonitor.png">
+	<SubTexture name="heart half0000" x="562" y="218" width="27" height="34" frameX="-13" frameY="0" frameWidth="27" frameHeight="34"/>
+	<SubTexture name="heart0000" x="520" y="218" width="40" height="34"/>
+	<SubTexture name="no heart0000" x="520" y="218" width="1" height="1"/>
+	<SubTexture name="healthMonitor0000" x="2" y="2" width="516" height="287"/>
+	<SubTexture name="fys0000" x="520" y="2" width="141" height="106"/>
+	<SubTexture name="dead0000" x="520" y="110" width="141" height="106"/>
+</TextureAtlas>
