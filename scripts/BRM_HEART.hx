@@ -72,6 +72,8 @@ function onCreate():Void {
         heartSpr.scale.set(0.75, 0.75);
         heartSpr.updateHitbox();
         heartSpr.cameras = [camHUD];
+
+        FlxTween.num(0, 1, 1, {ease: FlxEase.circOut, startDelay: 0.4 + (-0.2 * i)}, v -> heartSpr.alpha = v);
         displayHearts.push(heartSpr);
         add(displayHearts[i]);
     }
@@ -80,6 +82,8 @@ function onCreate():Void {
         item.scale.set(0.75, 0.75);
         item.updateHitbox();
         item.cameras = [camHUD];
+
+        FlxTween.num(0, 1, 1, {ease: FlxEase.circOut, startDelay: 0.2}, v -> item.alpha = v);
     }
 }
 

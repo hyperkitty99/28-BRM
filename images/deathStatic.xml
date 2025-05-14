@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="deathStatic.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="staticBlue0000" x="206" y="322" width="157" height="146"/>
+	<SubTexture name="staticBlue0001" x="365" y="322" width="157" height="146"/>
+	<SubTexture name="staticBlue0002" x="410" y="2" width="157" height="146"/>
+	<SubTexture name="staticBlue0003" x="410" y="150" width="157" height="146"/>
+	<SubTexture name="staticRed0000" x="206" y="2" width="202" height="160" frameX="0" frameY="-3" frameWidth="202" frameHeight="165"/>
+	<SubTexture name="staticRed0001" x="206" y="164" width="202" height="156" frameX="0" frameY="-9" frameWidth="202" frameHeight="165"/>
+	<SubTexture name="staticRed0002" x="2" y="2" width="202" height="165"/>
+	<SubTexture name="staticRed0003" x="2" y="169" width="202" height="165"/>
+</TextureAtlas>

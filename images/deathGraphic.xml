@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="deathGraphic.png">
+	<SubTexture name="Symbol 10000" x="2" y="2" width="1422" height="871"/>
+	<SubTexture name="Symbol 10001" x="2" y="875" width="1422" height="871"/>
+	<SubTexture name="Symbol 10002" x="2" y="1748" width="1422" height="871"/>
+	<SubTexture name="Symbol 10003" x="2" y="2621" width="1422" height="871"/>
+</TextureAtlas>

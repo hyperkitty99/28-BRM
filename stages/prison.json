@@ -1,29 +1,30 @@
 {
 	"camera_boyfriend": [
 		0,
-		0
+		-35
 	],
-	"_editorMeta": {
-		"boyfriend": "bf",
-		"gf": "gf",
-		"dad": "dad"
-	},
 	"preload": {
-		"images/prison/prison": 3,
 		"images/prison/staticc": 3,
-		"images/prison/monitorFore": 2,
+		"images/prison/prison": 3,
 		"images/prison/marijuana": 2,
+		"images/prison/monitorFore": 2,
 		"images/prison/speaker": 3
 	},
-	"girlfriend": [
-		400,
-		130
-	],
-	"stageUI": "",
+	"_editorMeta": {
+		"boyfriend": "bf",
+		"dad": "dad",
+		"gf": "gf"
+	},
 	"boyfriend": [
 		956,
 		165
 	],
+	"stageUI": "",
+	"girlfriend": [
+		221,
+		158
+	],
+	"defaultZoom": 0.63,
 	"objects": [
 		{
 			"x": -954,
@@ -73,12 +74,12 @@
 			"alpha": 1,
 			"animations": [
 				{
-					"offsets": null,
-					"indices": [],
-					"fps": 24,
-					"anim": "static",
 					"loop": true,
-					"name": "staticc"
+					"offsets": null,
+					"anim": "static",
+					"fps": 24,
+					"name": "staticc",
+					"indices": []
 				}
 			],
 			"type": "animatedSprite"
@@ -106,12 +107,12 @@
 			"alpha": 1,
 			"animations": [
 				{
-					"offsets": null,
-					"indices": [],
-					"fps": 24,
-					"anim": "speaker",
 					"loop": false,
-					"name": "speaker"
+					"offsets": null,
+					"anim": "speaker",
+					"fps": 24,
+					"name": "speaker",
+					"indices": []
 				}
 			],
 			"type": "animatedSprite"
@@ -146,7 +147,7 @@
 		},
 		{
 			"x": 1520,
-			"y": 624,
+			"y": 634,
 			"scale": [
 				1,
 				1
@@ -171,16 +172,15 @@
 		0,
 		0
 	],
-	"defaultZoom": 0.75,
-	"camera_speed": 1,
-	"directory": "week1",
 	"opponent": [
 		-308,
 		171
 	],
+	"directory": "week1",
+	"camera_speed": 1,
+	"hide_girlfriend": false,
 	"camera_opponent": [
 		0,
 		0
-	],
-	"hide_girlfriend": false
+	]
 }
