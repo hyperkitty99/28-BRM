@@ -1,0 +1,9 @@
+{
+	"name": "28 BRM",
+	"description": "In-dev.",
+	"restart":true,
+	"runsGlobally": true,
+	"color": [170, 170, 170],
+	"discordRPC": "",
+	"iconFramerate": 10
+}

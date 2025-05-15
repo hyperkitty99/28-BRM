@@ -1,0 +1,9 @@
+[
+    {
+        "save": "initialized",
+        "name": "initialized",
+        "type": "bool",
+        "description": "Internal.",
+        "value": false
+    }
+]
