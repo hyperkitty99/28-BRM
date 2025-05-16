@@ -78,7 +78,7 @@ function onGameOver():Void {
 
         FlxTween.num(1.5, 0.95, 1, {ease: FlxEase.circInOut, startDelay: 2}, (v) -> deathMonitor.scale.x = deathMonitor.scale.y = v);
 
-        FlxTween.num(1, 0.5, 0.5, {ease: FlxEase.circOut, startDelay: 0.8}, (v) -> black.alpha = v);
+        FlxTween.num(1, 0.7, 0.5, {ease: FlxEase.circOut, startDelay: 0.8}, (v) -> black.alpha = v);
 
         Conductor.songPosition = 0;
 
@@ -138,7 +138,7 @@ function endBullshit():Void
 	if (!isEnding)
 	{
         FlxTween.num(1, 0, 0.5, {ease: FlxEase.circOut}, (v) -> deathMonitor.alpha = v);
-        FlxTween.num(0.5, 0, 0.5, {ease: FlxEase.circOut, startDelay: 1.6}, (v) -> black.alpha = v);
+        FlxTween.num(0.7, 0, 0.5, {ease: FlxEase.circOut, startDelay: 1.6}, (v) -> black.alpha = v);
         FlxTimer.wait(1.6, () -> {
             game.defaultCamZoom = stageZoom;
 

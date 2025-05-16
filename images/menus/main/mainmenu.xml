@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="mainmenu.png" width="5047" height="2090">
+	<SubTexture name="window instance 10000" x="875" y="1243" width="508" height="551" frameX="-4" frameY="-28" frameWidth="519" frameHeight="588"/>
+	<SubTexture name="books0000" x="2" y="1642" width="742" height="363" frameX="-0" frameY="-0" frameWidth="743" frameHeight="363"/>
+	<SubTexture name="disc0000" x="3320" y="1828" width="565" height="221" frameX="-0" frameY="-0" frameWidth="565" frameHeight="221"/>
+	<SubTexture name="door0000" x="2493" y="1549" width="295" height="480" frameX="-0" frameY="-0" frameWidth="295" frameHeight="480"/>
+	<SubTexture name="drink0000" x="746" y="1796" width="467" height="292" rotated="true" frameX="-0" frameY="-0" frameWidth="292" frameHeight="467"/>
+	<SubTexture name="ffb0000" x="4411" y="579" width="562" height="788" frameX="-0" frameY="-0" frameWidth="562" frameHeight="788"/>
+	<SubTexture name="icon0000" x="746" y="1642" width="126" height="86" frameX="-0" frameY="-0" frameWidth="126" frameHeight="87"/>
+	<SubTexture name="kvas0000" x="1815" y="1702" width="135" height="317" frameX="-0" frameY="-0" frameWidth="135" frameHeight="317"/>
+	<SubTexture name="light0000" x="2" y="579" width="3165" height="662" frameX="-0" frameY="-0" frameWidth="3166" frameHeight="662"/>
+	<SubTexture name="monitor0000" x="3169" y="579" width="1240" height="850" frameX="-0" frameY="-0" frameWidth="1241" frameHeight="850"/>
+	<SubTexture name="paper0000" x="1968" y="1243" width="825" height="304" frameX="-0" frameY="-1" frameWidth="825" frameHeight="305"/>
+	<SubTexture name="screwdriver0000" x="1215" y="1796" width="99" height="255" rotated="true" frameX="-0" frameY="-0" frameWidth="255" frameHeight="99"/>
+	<SubTexture name="shadow0000" x="2" y="1243" width="871" height="397" frameX="-0" frameY="-0" frameWidth="871" frameHeight="397"/>
+	<SubTexture name="static0000" x="3845" y="1431" width="519" height="395" frameX="-0" frameY="-0" frameWidth="523" frameHeight="398"/>
+	<SubTexture name="static0001" x="3845" y="1431" width="519" height="395" frameX="-0" frameY="-0" frameWidth="523" frameHeight="398"/>
+	<SubTexture name="static0002" x="3320" y="1431" width="523" height="395" frameX="-0" frameY="-2" frameWidth="523" frameHeight="398"/>
+	<SubTexture name="static0003" x="3320" y="1431" width="523" height="395" frameX="-0" frameY="-2" frameWidth="523" frameHeight="398"/>
+	<SubTexture name="static0004" x="2795" y="1431" width="523" height="397" frameX="-0" frameY="-0" frameWidth="523" frameHeight="398"/>
+	<SubTexture name="static0005" x="2795" y="1431" width="523" height="397" frameX="-0" frameY="-0" frameWidth="523" frameHeight="398"/>
+	<SubTexture name="static0006" x="1968" y="1549" width="523" height="397" frameX="-0" frameY="-0" frameWidth="523" frameHeight="398"/>
+	<SubTexture name="static0007" x="1968" y="1549" width="523" height="397" frameX="-0" frameY="-0" frameWidth="523" frameHeight="398"/>
+	<SubTexture name="stickies0000" x="1385" y="1702" width="428" height="369" frameX="-0" frameY="-0" frameWidth="428" frameHeight="369"/>
+	<SubTexture name="table0000" x="2" y="2" width="5043" height="575" frameX="-0" frameY="-0" frameWidth="5043" frameHeight="575"/>
+	<SubTexture name="tissue0000" x="2795" y="1243" width="300" height="163" frameX="-0" frameY="-0" frameWidth="300" frameHeight="163"/>
+	<SubTexture name="tv dark0000" x="4411" y="1369" width="592" height="511" frameX="-0" frameY="-0" frameWidth="592" frameHeight="511"/>
+	<SubTexture name="tv light0000" x="1385" y="1243" width="581" height="457" frameX="-2" frameY="-2" frameWidth="590" frameHeight="465"/>
+</TextureAtlas>

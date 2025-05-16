@@ -1,9 +1,7 @@
-import flixel.input.gamepad.FlxGamepad;
-import flixel.group.FlxTypedGroup;
 import objects.BGSprite;
 import states.TitleState;
 
-var textGroup:FlxTypedGroup<Alphabet>;
+var text:Alphabet;
 var ngSpr:FlxSprite;
 
 var skippedIntro:Bool = false;
@@ -18,13 +16,10 @@ var tempRock:FlxSprite;
 var tempHell:BGSprite;
 
 function onCreate():Void {
-	Paths.clearStoredMemory();
-
     if (!TitleState.initialized || FlxG.sound.music == null) FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 
     FlxSprite.antialiasing = ClientPrefs.data.antialiasing;
 	Conductor.bpm = 50;
-	persistentUpdate = true;
 
     add(new BGSprite('menus/title/sky', 0, 1094, 1, 0.4));
     add(new BGSprite('menus/title/mountains', 0, 3300, 1, 0.6));
@@ -56,22 +51,20 @@ function onCreate():Void {
     uBar.scrollFactor.set();
 	add(uBar);
 
-	add(textGroup = new FlxTypedGroup());
+	add(text = new Alphabet(40, 120, 'Iccer\nNickNGC\nFlying Felt Boot\nHordy17\nMintDefiance', true));
+	text.setScale(0.8, 0.8);
+	text.scrollFactor.set();
 
 	add(ngSpr = new BGSprite('menus/title/durka', 40, FlxG.height * 0.44, 0, 0, ['logo'], true));
 	ngSpr.visible = logoBl.visible = blackScreen.visible = false;
 
     FlxTween.tween(FlxG.camera.scroll, {y: 4750}, 25, {ease: FlxEase.linear, type: 2});
 
-    createCoolText(['28 BRM by'], -20);
-
     if (FlxG.random.bool(0.1)) {
         FlxG.openURL('youtu.be/ld2pFUIY35M?si=7yvMWvjKhyQLk8ac');
     }
 
 	TitleState.initialized ? skipIntro() : TitleState.initialized = true;
-
-	Paths.clearUnusedMemory();
 }
 
 function getIntroTextShit():Array<Array<String>> {
@@ -85,20 +78,13 @@ function getIntroTextShit():Array<Array<String>> {
 }
 
 var gotRidOfTempAssets:Bool = false;
-function onUpdate(elapsed:Float) {
-	if (FlxG.sound.music != null)
+function onUpdate(elapsed:Float):Void {
+	if (FlxG.sound.music != null) {
 		Conductor.songPosition = FlxG.sound.music.time;
+	}
 
-	var pressedEnter:Bool = FlxG.keys.justPressed.ENTER || controls.ACCEPT;
-
-	var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
-
-	if (gamepad != null) if (gamepad.justPressed.START) pressedEnter = true;
-
-	if (TitleState.initialized && !transitioning && skippedIntro)
-	{
-		if(pressedEnter)
-		{
+	if (TitleState.initialized && !transitioning && skippedIntro) {
+		if (controls.ACCEPT) {
 			FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 
@@ -111,9 +97,9 @@ function onUpdate(elapsed:Float) {
 		}
 	}
 
-	if (TitleState.initialized && pressedEnter && !skippedIntro) skipIntro();
+	if (TitleState.initialized && controls.ACCEPT && !skippedIntro) skipIntro();
 
-    if (pressedEnter && !gotRidOfTempAssets) {
+    if (controls.ACCEPT && !gotRidOfTempAssets) {
         tempRock.destroy();
         tempHell.destroy();
         gotRidOfTempAssets = true;
@@ -128,90 +114,80 @@ function onUpdate(elapsed:Float) {
     }
 }
 
-function createCoolText(textArray:Array<String>, ?offset:Float = 0) {
-	for (i in 0...textArray.length) {
-		var money:Alphabet = new Alphabet(40, (i * 60) + 200 + offset, textArray[i], true);
-        money.scrollFactor.set();
-		textGroup.add(money);
-	}
+function createCoolText(textArray:String, ?offset:Float = 0):Void {
+	text.y = 120 + offset;
+	text.text = textArray;
 }
 
-function addMoreText(text:String, ?offset:Float = 0) {
-	var coolText:Alphabet = new Alphabet(40, (textGroup.length * 60) + 200 + offset, text, true);
-    coolText.scrollFactor.set();
-	textGroup.add(coolText);
+function addMoreText(textArray:String):Void {
+	text.text += '\n' + textArray;
 }
 
-function deleteCoolText() {
-	textGroup.clear();
+function deleteCoolText():Void {
+	text.text = '';
 }
 
-function onBeatHit(beat:Int) {
-	if(TitleState.closedState || skippedIntro) return;
+function onBeatHit(beat:Int):Void {
+	if (TitleState.closedState || skippedIntro) return;
     
     sickBeats++;
 	switch sickBeats {
+		case 2:
+			addMoreText('\nPresent');
 		case 3:
-			addMoreText('Iccer', -20);
-            addMoreText('NickNGC', -20);
-            addMoreText('Flying Felt Boot', -20);
-			addMoreText('Hordy17', -20);
-			addMoreText('MintDefiance', -20);
-		case 4:
 			deleteCoolText();
-            createCoolText(['From Russia'], 80);
+            createCoolText('From Russia', 180);
+		case 6:
+			addMoreText('With love');
 		case 7:
-			addMoreText('With love', 80);
-		case 8:
 			deleteCoolText();
-            createCoolText(['Inspired by'], 80);
+            createCoolText('Inspired by', 180);
+		case 10:
+			addMoreText('17 bucks');
 		case 11:
-			addMoreText('17 bucks', 80);
-		case 12:
 			deleteCoolText();
-            createCoolText(['idk'], 80);
+            createCoolText('idk', 180);
+		case 14:
+			addMoreText('idk');
 		case 15:
-			addMoreText('idk', 80);
-		case 16:
 			deleteCoolText();
-            createCoolText(['idk'], 80);
-        case 19:
-			addMoreText('idk', 80);
-		case 20:
+            createCoolText('idk', 180);
+        case 18:
+			addMoreText('idk');
+		case 19:
 			deleteCoolText();
-            createCoolText(['Powered', 'by'], -75);
-        case 23:
-            addMoreText('Durkagrad', -75);
+            createCoolText('Powered\nby', -20);
+        case 22:
+            addMoreText('Durkagrad');
 			ngSpr.visible = blackScreen.visible = true;
-        case 24:
+        case 23:
 			deleteCoolText();
             ngSpr.visible = blackScreen.visible = false;
-            createCoolText(['idk'], 80);
-        case 27:
-            addMoreText('idk', 80);
-		case 28:
+            createCoolText('idk', 180);
+        case 26:
+            addMoreText('idk');
+		case 27:
             deleteCoolText();
             logoBl.visible = true;
-			addMoreText('28');
-		case 29:
+			createCoolText('28', 140);
+		case 28:
 			addMoreText('BRM');
-		case 30:
+		case 29:
 			addMoreText('Season 1');
-		case 32:
+		case 31:
 			skipIntro();
 	}
 }
 
-function isOnScreen(sprite:BGSprite):Bool
-{
-	@:privateAccess return FlxG.camera.containsRect(sprite.getScreenBounds(sprite._rect, FlxG.camera));
+function isOnScreen(sprite:BGSprite):Bool {
+	@:privateAccess return FlxG.camera.containsRect(sprite.getScreenBounds(sprite._rect, FlxG.camera)); //for some reason regular isOnScreen didnt want to work??????
 }
 
 function skipIntro():Void {
     if (skippedIntro) return;
 
 	remove(ngSpr);
-    remove(textGroup);
+    remove(text);
 	FlxG.camera.flash(FlxColor.WHITE, 4);
 	skippedIntro = logoBl.visible = true;
 }
