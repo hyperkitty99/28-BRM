@@ -132,49 +132,49 @@ function onBeatHit(beat:Int):Void {
     
     sickBeats++;
 	switch sickBeats {
-		case 2:
-			addMoreText('\nPresent');
 		case 3:
+			addMoreText('\nPresent');
+		case 4:
 			deleteCoolText();
             createCoolText('From Russia', 180);
-		case 6:
-			addMoreText('With love');
 		case 7:
+			addMoreText('With love');
+		case 8:
 			deleteCoolText();
             createCoolText('Inspired by', 180);
-		case 10:
-			addMoreText('17 bucks');
 		case 11:
+			addMoreText('17 bucks');
+		case 12:
 			deleteCoolText();
             createCoolText('idk', 180);
-		case 14:
-			addMoreText('idk');
 		case 15:
+			addMoreText('idk');
+		case 16:
 			deleteCoolText();
             createCoolText('idk', 180);
-        case 18:
+        case 19:
 			addMoreText('idk');
-		case 19:
+		case 20:
 			deleteCoolText();
             createCoolText('Powered\nby', -20);
-        case 22:
+        case 23:
             addMoreText('Durkagrad');
 			ngSpr.visible = blackScreen.visible = true;
-        case 23:
+        case 24:
 			deleteCoolText();
             ngSpr.visible = blackScreen.visible = false;
             createCoolText('idk', 180);
-        case 26:
+        case 27:
             addMoreText('idk');
-		case 27:
+		case 28:
             deleteCoolText();
             logoBl.visible = true;
 			createCoolText('28', 140);
-		case 28:
-			addMoreText('BRM');
 		case 29:
+			addMoreText('BRM');
+		case 30:
 			addMoreText('Season 1');
-		case 31:
+		case 32:
 			skipIntro();
 	}
 }
