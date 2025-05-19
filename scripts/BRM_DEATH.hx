@@ -42,7 +42,6 @@ function onGameOver():Void {
 
 		FlxTimer.globalManager.clear();
 		FlxTween.globalManager.clear();
-		FlxG.camera.filters = [];
 
         FlxG.sound.play(Paths.sound(GameOverSubstate.deathSoundName));
     
@@ -68,7 +67,7 @@ function onGameOver():Void {
         game.addBehindBF(black = new FlxSprite(-500, -500).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK));
         black.scrollFactor.set();
 
-        add(deathMonitor = new BGSprite('deathGraphic', game.boyfriend.x - 960, game.boyfriend.y - 590, 0, 0, ['Symbol 1'], true));
+        add(deathMonitor = new BGSprite('deathGraphic', game.boyfriend.x - 1100, game.boyfriend.y - 590, 0, 0, ['Symbol 1'], true));
         deathMonitor.animation.play('Symbol 1');
         deathMonitor.scale.set(0.95, 0.95);
         deathMonitor.alpha = 0;

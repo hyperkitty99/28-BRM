@@ -1,119 +1,127 @@
 import objects.BGSprite;
-import flixel.group.FlxTypedGroup;
+
 import flixel.addons.display.FlxRuntimeShader;
 import flixel.addons.effects.FlxSkewedSprite;
+import states.PlayState;
+import backend.Song;
 
-typedef Sprite = {name:String, sprite:FlxSprite}
+function addSprite(name:String, ?pos:Array<Float> = [0, 0], ?scroll:Array<Float> = [1, 1], ?prefix:String = null, ?loop:Bool = false):Void {
+    var sprite:FlxSkewedSprite = new FlxSkewedSprite(pos[0] ?? 0, pos[1] ?? 0);
+    sprite.antialiasing = ClientPrefs.data.antialiasing;
 
-function createSprite(name:String, ?x:Float = 0, ?y:Float = 0, ?scroll:Float = null, ?prefix:String = null, ?loop:Bool = false):Sprite {
-    var sprite:FlxSkewedSprite = new FlxSkewedSprite(x, y);
-    sprite.frames = Paths.getSparrowAtlas(prefix != null ? 'menus/main/' + prefix : 'menus/main/mainmenu');
+    var path:String = prefix != null ? 'menus/main/' + prefix : 'menus/main/mainmenu';
 
-    if (sprite.frames != null) {
+    if (FileSystem.exists(Paths.modsXml(path))) {
+        sprite.frames = Paths.getSparrowAtlas(path);
         sprite.animation.addByPrefix(name, name, 24, loop);
         sprite.animation.play(name);
     } else {
-        sprite.loadGraphic(Paths.image(name));
+        sprite.loadGraphic(Paths.image(path));
     }
 
     sprite.updateHitbox();
-    sprite.scrollFactor.x = scroll ?? 1;
-    return {name: name, sprite: sprite};
+    sprite.scrollFactor.set(scroll[0] ?? 1, scroll[1] ?? 1);
+    setVar(name, sprite);
+    add(sprite);
 }
 
 var skew:FlxRuntimeShader = new FlxRuntimeShader(File.getContent(Paths.shaderFragment('skew')));
-var skew2:FlxRuntimeShader = new FlxRuntimeShader(File.getContent(Paths.shaderFragment('skew')));
 var lightSkew:FlxRuntimeShader = new FlxRuntimeShader(File.getContent(Paths.shaderFragment('skew')));
 
-var objects:Array<Sprite> = [
-    createSprite('window', 516, -212, 0.15),
-    createSprite('stickies', -174, -93, 0.15),
-    createSprite('door', 1345, -12, 0.15),
-    createSprite('table', -1881, 690, 1, 'table'),
-    createSprite('tissue', -132, 275, 0.4),
-    createSprite('kvas', 1176, 121, 0.4),
-    createSprite('tv dark', 336, -18, 0.6395),
-    createSprite('light', -939, 900, 1.6, 'light'),
-    createSprite('static', 364, 39, 0.6395, 'mainmenu', true),
-    createSprite('screen', -11, -80, 0.635, 'screen'),
-    createSprite('monitor', -11, -286, 0.65),
-    createSprite('tv light', 325, -10, 0.65),
-    //createSprite('shadow', 679, 661),
-    createSprite('other', -830, 520, 0.85, 'other'),
-    createSprite('long', -460, 490, 1.125, 'long'),
-    createSprite('bud zdorov', -790, 455, 0.885, 'bud zdorov'),
-    createSprite('drink', -537, 60, 0.8),
-    createSprite('icon', 107, 530, 0.78),
-    createSprite('books', 1233, 467, 0.8),
-    createSprite('ffb', 1513, -97, 0.8)
-];
-
-var disc:BGSprite; 
-
 var tvOn:Bool = false;
+var grabbedDVD:Bool = false;
 
 function onCreatePost():Void {
-    for (object in objects) {
-        add(object.sprite);
+    addSprite('window', [516, -12], [0.15]);
+    addSprite('stickies', [-174, 107], [0.15]);
+    addSprite('door', [1345, 188], [0.15]);
+
+    addSprite('table', [-1881, 890], [1], 'table');
+    getVar('table').shader = skew;
+    getVar('table').scale.set(2, 2);
+
+    addSprite('tissue', [-132, 475], [0.4]);
+    addSprite('kvas', [1176, 321], [0.4]);
+    addSprite('tv dark', [336, 182], [0.6145]);
+
+    addSprite('light', [-939, 1100], [1.6], 'light');
+    getVar('light').shader = lightSkew;
+    getVar('light').scale.set(2, 2);
+
+    addSprite('static', [364, 239], [0.6145], 'mainmenu', true);
+    addSprite('screen', [-11, 120], [0.61], 'screen');
+    addSprite('monitor', [-11, -86], [0.625]);
+    addSprite('tv light', [332, 206], [0.625]);
+    addSprite('shadow', [679, 861], [1, 1]);
+
+    addSprite('other', [-830, 720], [0.85], 'other');
+    getVar('other').origin.set(0, getVar('other').height);
+
+    addSprite('long', [-460, 690], [1.125], 'long');
+    getVar('long').origin.set(0, getVar('long').height);
+    
+    addSprite('bud zdorov', [-790, 655], [0.885], 'bud zdorov');
+    addSprite('drink', [-537, 260], [0.84]);
+    addSprite('icon', [107, 730], [0.78]);
+    addSprite('books', [1233, 667], [0.8]);
+    addSprite('ffb', [1513, 103], [0.8]);
+
+    addSprite('disc', [685, 851], [0.9], 'disc');
+    getVar('disc').origin.set(0, 0);
+
+    for (member in members) {
+        member.x += 16;
     }
 
-    for (object in objects) {
-        object.sprite.y += 200;
-    }
-
-    getProp('table').shader = skew;
-    getProp('table').scale.set(2, 2);
-    getProp('long').origin.set(0, getProp('long').height);
-    getProp('other').origin.set(0, getProp('other').height);
-    getProp('light').shader = lightSkew;
-    getProp('light').scale.set(2, 2);
-
-    //add(disc = new BGSprite('menus/main/discs', 685, 851, 1, 0.6, ['disc']));
-    //disc.updateHitbox();
-    //disc.origin.y = 0;
-    //disc.dance(true);
-
-    FlxG.camera.zoom = 0.4;
+    FlxG.camera.zoom = 0.5;
     FlxG.camera.bgColor = 0xFF0A0E15;
 }
 
 function onUpdatePost(elapsed:Float):Void {
     if (controls.BACK) {
-        MusicBeatState.switchState(new CustomState('BRM_TITLE_STATE'));
+        if (!tvOn) {
+            MusicBeatState.switchState(new CustomState('BRM_TITLE_STATE'));
+        } else {
+            tvOn = false;
+        }
     }
 
     if (controls.ACCEPT) {
         tvOn = !tvOn;
     }
 
-    getProp('bud zdorov').skew.x = (FlxG.camera.scroll.x / -6);
-    skew2.setFloat('skew', (FlxG.camera.scroll.x / 500) / 2);
+    getVar('bud zdorov').skew.x = (FlxG.camera.scroll.x / -6.3);
     lightSkew.setFloat('skew', (FlxG.camera.scroll.x / 650) / 2.6);
     skew.setFloat('skew', (FlxG.camera.scroll.x / 1280) / 2.5);
 
-    getProp('long').scale.x = (FlxG.camera.scroll.x / 1050) + 1;
-    getProp('other').scale.x = (FlxG.camera.scroll.x / getProp('other').x) / 1.6 + 1;
+    getVar('long').scale.x = (FlxG.camera.scroll.x / 1050) + 1;
+    getVar('other').scale.x = (FlxG.camera.scroll.x / getVar('other').x) / 1.6 + 1;
 
-    //disc.scale.y = (-(FlxG.camera.scroll.y / 720) / 1.3) + 1;
+    var disc = getVar('disc');
 
-    //disc.color = tvOn ? FlxColor.WHITE : 0xFFBDBDBD;
+    disc.color = tvOn ? FlxColor.WHITE : 0xFFBDBDBD;
+    disc.skew.x = (FlxG.camera.scroll.x / -7.2);
 
-    for (object in [getProp('light'), getProp('static'), getProp('tv light')/*, getProp('shadow')*/]) {
-        object.visible = tvOn;
+    if (FlxG.mouse.overlaps(disc) && FlxG.mouse.justPressed) {
+        grabbedDVD = true;
     }
 
-	final point = [FlxMath.bound(FlxG.mouse.x, getProp('table').x, getProp('table').width - 4000), FlxMath.bound(FlxG.mouse.y, 0, 0)];
-	FlxG.camera.scroll.set(
-		FlxMath.lerp(point[0] * FlxG.camera.zoom * 0.5, FlxG.camera.scroll.x, Math.exp(-elapsed * 25)), 
-		FlxMath.lerp(point[1] * FlxG.camera.zoom * 0.5, FlxG.camera.scroll.y, Math.exp(-elapsed * 25))
-	);
-}
+    if (grabbedDVD) {
+        disc.setPosition(FlxMath.lerp(disc.x, (-FlxG.camera.scroll.x) + 1000, Math.exp(-elapsed * 700)), FlxMath.lerp(disc.y, 1400, Math.exp(-elapsed * 700)));
+        disc.scale.x = disc.scale.y = FlxMath.lerp(disc.scale.x, 1.7, Math.exp(-elapsed * 700));
 
-function getProp(name:String):BGSprite {
-    for (object in objects) {
-        if (object.name == name) {
-            return object.sprite;
+        if (tvOn) {
+            tvOn = false;
+			PlayState.SONG = Song.loadFromJson('russophobia', 'russophobia');
+			PlayState.isStoryMode = false;
+            MusicBeatState.switchState(new PlayState());
         }
     }
-    return null;
+
+    getVar('light').visible = getVar('static').visible = getVar('tv light').visible = getVar('shadow').visible = tvOn;
+
+    FlxG.camera.scroll.y = FlxMath.lerp(tvOn ? 78.5 : 0, FlxG.camera.scroll.y, Math.exp(-elapsed * 7));
+    FlxG.camera.zoom = FlxMath.lerp(tvOn ? 1.85 : 0.5, FlxG.camera.zoom, Math.exp(-elapsed * 7));
+
+	FlxG.camera.scroll.x = FlxMath.lerp(tvOn ? 0 : FlxMath.bound(FlxG.mouse.x - 640, -900, 900) * FlxG.camera.zoom * 0.5, FlxG.camera.scroll.x, Math.exp(-elapsed * 5));
 }

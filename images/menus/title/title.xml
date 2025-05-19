@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="title.png" width="3792" height="3344">
+	<SubTexture name="city" x="2566" y="2" width="937" height="1280" rotated="true" frameX="-0" frameY="-2" frameWidth="1280" frameHeight="939"/>
+	<SubTexture name="BGCity" x="2724" y="1284" width="801" height="1280" rotated="true" frameX="-0" frameY="-0" frameWidth="1280" frameHeight="801"/>
+	<SubTexture name="factory" x="3505" y="2" width="285" height="735" frameX="-0" frameY="-0" frameWidth="285" frameHeight="735"/>
+	<SubTexture name="hell" x="1442" y="2028" width="1280" height="1254" frameX="-0" frameY="-19" frameWidth="1280" frameHeight="1273"/>
+	<SubTexture name="mountains" x="2" y="2062" width="1438" height="1280" rotated="true" frameX="-0" frameY="-0" frameWidth="1280" frameHeight="1438"/>
+	<SubTexture name="sky" x="2" y="2" width="1280" height="2058" frameX="-0" frameY="-0" frameWidth="1280" frameHeight="2058"/>
+	<SubTexture name="rock" x="1284" y="2" width="1280" height="2024" frameX="-0" frameY="-0" frameWidth="1280" frameHeight="2024"/>
+</TextureAtlas>

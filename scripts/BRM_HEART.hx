@@ -64,11 +64,11 @@ function increaseHP():Void {
 }
 
 function onCreate():Void {
-    add(healthBG = new BGSprite('healthMonitor', 890, 502, 0, 0, ['healthMonitor'], false));
-    add(fysIcon = new BGSprite('healthMonitor', 1083, 600, 0, 0, ['fys', 'dead'], false));
+    add(healthBG = new BGSprite('healthMonitor', 570, 502, 0, 0, ['healthMonitor'], false));
+    add(fysIcon = new BGSprite('healthMonitor', 763, 600, 0, 0, ['fys', 'dead'], false));
 
     for (i in 0...3) {
-        var heartSpr = new BGSprite('healthMonitor', 948 + (i * 35), 665, 0, 0, ['heart', 'heart half', 'no heart']);
+        var heartSpr = new BGSprite('healthMonitor', 630 + (i * 35), 665, 0, 0, ['heart', 'heart half', 'no heart']);
         heartSpr.scale.set(0.75, 0.75);
         heartSpr.updateHitbox();
         heartSpr.cameras = [camHUD];
