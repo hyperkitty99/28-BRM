@@ -56,7 +56,7 @@ function onCreate():Void {
 	add(ngSpr = new BGSprite('menus/title/durka', 40, FlxG.height * 0.4, 0, 0, ['logo'], true));
 	ngSpr.visible = logoBl.visible = blackScreen.visible = false;
 
-    if (FlxG.random.bool(0.1)) {
+    if (FlxG.random.bool(10)) {
         FlxG.openURL('youtu.be/ld2pFUIY35M?si=7yvMWvjKhyQLk8ac');
     }
 

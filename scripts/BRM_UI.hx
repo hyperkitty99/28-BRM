@@ -39,18 +39,18 @@ function onCreate():Void {
     FlxTween.num(0, 1, 1.5, {ease: FlxEase.cubeInOut, delay: 0.3}, applyPlayerAlpha);
 }
 
-function onPause():Void {
-    var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-	bg.updateHitbox();
-    bg.cameras = [camOther];
-	bg.alpha = 0.6;
-	bg.scrollFactor.set();
-	add(bg);
+// function onPause():Void {
+//     var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+// 	bg.updateHitbox();
+//     bg.cameras = [camOther];
+// 	bg.alpha = 0.6;
+// 	bg.scrollFactor.set();
+// 	add(bg);
 
-    CustomSubstate.openCustomSubstate('BRM_PAUSE', true);
+//     CustomSubstate.openCustomSubstate('BRM_PAUSE', true);
 
-    return Function_Stop;
-}
+//     return Function_Stop;
+// }
 
 function onDestroy():Void {
     FlxG.game.setFilters([]);

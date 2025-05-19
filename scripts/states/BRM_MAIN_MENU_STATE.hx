@@ -107,9 +107,8 @@ function onUpdatePost(elapsed:Float):Void {
     }
 
     if (grabbedDVD) {
-        disc.setPosition(FlxMath.lerp(disc.x, (-FlxG.camera.scroll.x) + 1000, Math.exp(-elapsed * 700)), FlxMath.lerp(disc.y, 1400, Math.exp(-elapsed * 700)));
-        disc.scale.x = disc.scale.y = FlxMath.lerp(disc.scale.x, 1.7, Math.exp(-elapsed * 700));
-
+        disc.setPosition(FlxMath.lerp(disc.x, (-FlxG.camera.scroll.x) + 1000, 2 * elapsed), FlxMath.lerp(disc.y, 1400, 2 * elapsed));
+        disc.scale.x = disc.scale.y = FlxMath.lerp(disc.scale.x, 1.7, 2 * elapsed);
         if (tvOn) {
             tvOn = false;
 			PlayState.SONG = Song.loadFromJson('russophobia', 'russophobia');
@@ -120,8 +119,8 @@ function onUpdatePost(elapsed:Float):Void {
 
     getVar('light').visible = getVar('static').visible = getVar('tv light').visible = getVar('shadow').visible = tvOn;
 
-    FlxG.camera.scroll.y = FlxMath.lerp(tvOn ? 78.5 : 0, FlxG.camera.scroll.y, Math.exp(-elapsed * 7));
-    FlxG.camera.zoom = FlxMath.lerp(tvOn ? 1.85 : 0.5, FlxG.camera.zoom, Math.exp(-elapsed * 7));
+    FlxG.camera.scroll.y = FlxMath.lerp(FlxG.camera.scroll.y, tvOn ? 78.5 : 0, 10 * elapsed);
+    FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, tvOn ? 1.85 : 0.5, 10 * elapsed);
 
-	FlxG.camera.scroll.x = FlxMath.lerp(tvOn ? 0 : FlxMath.bound(FlxG.mouse.x - 640, -900, 900) * FlxG.camera.zoom * 0.5, FlxG.camera.scroll.x, Math.exp(-elapsed * 5));
+	FlxG.camera.scroll.x = FlxMath.lerp(FlxG.camera.scroll.x, tvOn ? 0 : FlxMath.bound(FlxG.mouse.x - 640, -900, 900) * FlxG.camera.zoom * 0.5, 10 * elapsed);
 }
