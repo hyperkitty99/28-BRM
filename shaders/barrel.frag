@@ -1,5 +1,5 @@
 #pragma header
-#define distortion 0.5
+#define distortion 0.6
 
 void main() {
     vec2 uv = openfl_TextureCoordv - 0.5;
