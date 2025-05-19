@@ -1,5 +1,6 @@
 import objects.BGSprite;
 
+import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.display.FlxRuntimeShader;
 import flixel.addons.effects.FlxSkewedSprite;
 import states.PlayState;
@@ -113,7 +114,8 @@ function onUpdatePost(elapsed:Float):Void {
             tvOn = false;
 			PlayState.SONG = Song.loadFromJson('russophobia', 'russophobia');
 			PlayState.isStoryMode = false;
-            MusicBeatState.switchState(new PlayState());
+            FlxG.switchState(new PlayState());
+            FlxTransitionableState.skipNextTransOut = FlxTransitionableState.skipNextTransIn = true;
         }
     }
 

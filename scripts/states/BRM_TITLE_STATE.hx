@@ -57,8 +57,12 @@ function onCreate():Void {
 	ngSpr.visible = logoBl.visible = blackScreen.visible = false;
 
     if (FlxG.random.bool(10)) {
-        FlxG.openURL('youtu.be/ld2pFUIY35M?si=7yvMWvjKhyQLk8ac');
+        FlxG.openURL(FlxG.random.bool(0.00001) ? 'youtu.be/49aRGtyy9VM?si=SglmU_V9EPB9xLxI' : 'youtu.be/ld2pFUIY35M?si=7yvMWvjKhyQLk8ac');
     }
+
+	if (FlxG.random.bool(0.1)) {
+		FlxG.openURL('youtu.be/HtgEQeMb4Uc?si=jgWu59pREBNqm_NX');
+	}
 
 	TitleState.initialized ? skipIntro(true) : TitleState.initialized = true;
 }
