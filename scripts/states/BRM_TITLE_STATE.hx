@@ -56,11 +56,11 @@ function onCreate():Void {
 	add(ngSpr = new BGSprite('menus/title/durka', 40, FlxG.height * 0.4, 0, 0, ['logo'], true));
 	ngSpr.visible = logoBl.visible = blackScreen.visible = false;
 
-    if (FlxG.random.bool(10)) {
+    if (FlxG.random.bool(1 / ClientPrefs.data.framerate)) {
         FlxG.openURL(FlxG.random.bool(0.00001) ? 'youtu.be/49aRGtyy9VM?si=SglmU_V9EPB9xLxI' : 'youtu.be/ld2pFUIY35M?si=7yvMWvjKhyQLk8ac');
     }
 
-	if (FlxG.random.bool(0.1)) {
+	if (FlxG.random.bool(0.5 / ClientPrefs.data.framerate)) {
 		FlxG.openURL('youtu.be/HtgEQeMb4Uc?si=jgWu59pREBNqm_NX');
 	}
 

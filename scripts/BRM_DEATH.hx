@@ -53,7 +53,10 @@ function onGameOver():Void {
 		game.camGame.target = null;
 
         camFollow = new FlxObject(0, 0, 1, 1);
-		camFollow.setPosition(game.boyfriend.getGraphicMidpoint().x + game.boyfriend.cameraPosition[0], game.boyfriend.getGraphicMidpoint().y + game.boyfriend.cameraPosition[1]);
+		camFollow.setPosition(boyfriend.getMidpoint().x - 45, boyfriend.getMidpoint().y);
+		camFollow.x -= boyfriend.cameraPosition[0] - boyfriendCameraOffset[0];
+		camFollow.y += boyfriend.cameraPosition[1] + boyfriendCameraOffset[1];
+
 		game.camGame.focusOn(new FlxBasePoint(game.camGame.scroll.x + (game.camGame.width / 2), game.camGame.scroll.y + (game.camGame.height / 2)));
 		game.camGame.follow(camFollow, FlxCameraFollowStyle.LOCKON, 0.01);
 		add(camFollow);

@@ -29,6 +29,7 @@ function addSprite(name:String, ?pos:Array<Float> = [0, 0], ?scroll:Array<Float>
 var skew:FlxRuntimeShader = new FlxRuntimeShader(File.getContent(Paths.shaderFragment('skew')));
 var lightSkew:FlxRuntimeShader = new FlxRuntimeShader(File.getContent(Paths.shaderFragment('skew')));
 
+var zoomedIn:Bool = false;
 var tvOn:Bool = false;
 var grabbedDVD:Bool = false;
 
@@ -52,6 +53,8 @@ function onCreatePost():Void {
     addSprite('static', [364, 239], [0.6145], 'mainmenu', true);
     addSprite('screen', [-11, 120], [0.61], 'screen');
     addSprite('monitor', [-11, -86], [0.625]);
+    addSprite('glow', [385, 690], [0.625], 'glow');
+
     addSprite('tv light', [332, 206], [0.625]);
     addSprite('shadow', [679, 861], [1, 1]);
 
@@ -80,15 +83,24 @@ function onCreatePost():Void {
 
 function onUpdatePost(elapsed:Float):Void {
     if (controls.BACK) {
-        if (!tvOn) {
+        if (!zoomedIn) {
             MusicBeatState.switchState(new CustomState('BRM_TITLE_STATE'));
         } else {
-            tvOn = false;
+            zoomedIn = false;
         }
     }
 
     if (controls.ACCEPT) {
+        zoomedIn = !zoomedIn;
+    }
+
+    if (FlxG.mouse.overlaps(getVar('glow')) && FlxG.mouse.justPressed) {
+        if (!tvOn) zoomedIn = !zoomedIn;
         tvOn = !tvOn;
+    }
+
+    if (FlxG.mouse.overlaps(getVar('ffb')) && FlxG.mouse.justPressed) {
+        if (FlxG.random.bool(100 / ClientPrefs.data.framerate)) FlxG.sound.play(Paths.sound('WHAT'));
     }
 
     getVar('bud zdorov').skew.x = (FlxG.camera.scroll.x / -6.3);
@@ -121,8 +133,8 @@ function onUpdatePost(elapsed:Float):Void {
 
     getVar('light').visible = getVar('static').visible = getVar('tv light').visible = getVar('shadow').visible = tvOn;
 
-    FlxG.camera.scroll.y = FlxMath.lerp(FlxG.camera.scroll.y, tvOn ? 78.5 : 0, 10 * elapsed);
-    FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, tvOn ? 1.85 : 0.5, 10 * elapsed);
+    FlxG.camera.scroll.y = FlxMath.lerp(FlxG.camera.scroll.y, zoomedIn ? 78.5 : 0, 10 * elapsed);
+    FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, zoomedIn ? 1.85 : 0.5, 10 * elapsed);
 
-	FlxG.camera.scroll.x = FlxMath.lerp(FlxG.camera.scroll.x, tvOn ? 0 : FlxMath.bound(FlxG.mouse.x - 640, -900, 900) * FlxG.camera.zoom * 0.5, 10 * elapsed);
+	FlxG.camera.scroll.x = FlxMath.lerp(FlxG.camera.scroll.x, zoomedIn ? 0 : FlxMath.bound(FlxG.mouse.x - 640, -900, 900) * FlxG.camera.zoom * 0.5, 10 * elapsed);
 }
