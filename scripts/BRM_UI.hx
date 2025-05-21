@@ -5,6 +5,8 @@ import Main;
 import openfl.display.Bitmap;
 import openfl.display.BitmapData;
 import lime.graphics.Image;
+import openfl.Lib;
+import flixel.FlxObject;
 
 var skinPath:String = 'noteSkins/' + game.dad.curCharacter + '/';
 
@@ -13,8 +15,7 @@ var opponentBG:BGSprite;
 
 var debugMode:Bool = false;
 var camBG:FlxCamera;
-
-var bg:Bitmap = new Bitmap(BitmapData.fromImage(Image.fromFile('mods/28-BRM/images/menus/main/screenClose.png')));
+var bg:BGSprite;
 
 function onCreate():Void {
     camBG = new FlxCamera();
@@ -24,9 +25,7 @@ function onCreate():Void {
     camGame.width = 960;
     camGame.x = 160;
 
-    FlxG.game.setFilters([new ShaderFilter(createRuntimeShader('ntsc'))]);
-
-    camGame.filters = camHUD.filters = [new ShaderFilter(createRuntimeShader('barrel'))];
+    camGame.filters = camHUD.filters = [new ShaderFilter(createRuntimeShader('barrel')), new ShaderFilter(createRuntimeShader('ntsc'))];
 
     var skinNotNull:Bool = Paths.image(skinPath + 'strumBG') != null;
     add(opponentBG = new BGSprite(skinNotNull ? skinPath + 'strumBG' : 'strumBG', 80, 0));
@@ -37,10 +36,11 @@ function onCreate():Void {
     playerBG.scale.set(0.54, 0.54);
     playerBG.cameras = [game.camHUD];
 
+    add(bg = new BGSprite('menus/main/screenClose'));
+    bg.cameras = [game.camOther];
+
     FlxTween.num(0, 1, 1.5, {ease: FlxEase.cubeInOut}, applyOpponentAlpha);
     FlxTween.num(0, 1, 1.5, {ease: FlxEase.cubeInOut, delay: 0.3}, applyPlayerAlpha);
-
-    FlxG.stage.addChild(bg);
 }
 
 // function onPause():Void {
@@ -55,11 +55,6 @@ function onCreate():Void {
 
 //     return Function_Stop;
 // }
-
-function onDestroy():Void {
-    FlxG.game.setFilters([]);
-    FlxG.stage.removeChild(bg);
-}
 
 function opponentNoteHit():Void {
     vocals.volume = 1;
