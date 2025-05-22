@@ -22,17 +22,14 @@ function onCreate():Void {
     camBG.bgColor = 0x00000000;
     FlxG.cameras.add(camBG, false);
 
-    camGame.width = 960;
-    camGame.x = 160;
-
-    camGame.filters = camHUD.filters = [new ShaderFilter(createRuntimeShader('barrel')), new ShaderFilter(createRuntimeShader('ntsc'))];
+    camGame.filters = camHUD.filters = [new ShaderFilter(createRuntimeShader('barrel4by3')), new ShaderFilter(createRuntimeShader('ntsc'))];
 
     var skinNotNull:Bool = Paths.image(skinPath + 'strumBG') != null;
     add(opponentBG = new BGSprite(skinNotNull ? skinPath + 'strumBG' : 'strumBG', 80, 0));
     opponentBG.scale.set(0.58, 0.68);
     opponentBG.cameras = [game.camHUD];
 
-    add(playerBG = new BGSprite('strumBG', 495, 65));
+    add(playerBG = new BGSprite('strumBG', 495, 70));
     playerBG.scale.set(0.54, 0.54);
     playerBG.cameras = [game.camHUD];
 
@@ -70,6 +67,7 @@ function onCreatePost():Void {
 
     for (i in 0...playerStrums.members.length) {
         playerStrums.members[i].x -= 60 + (i * 25);
+        playerStrums.members[i].y += 10;
         playerStrums.members[i].scale.x = playerStrums.members[i].scale.y -= 0.15;
     }
 }

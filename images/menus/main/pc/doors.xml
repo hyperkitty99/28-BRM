@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="doors.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="doors0000" x="983" y="730" width="433" height="497"/>
+	<SubTexture name="bar0000" x="1941" y="730" width="10" height="16" frameX="0" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0001" x="1941" y="730" width="10" height="16" frameX="0" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0002" x="1923" y="778" width="24" height="16" frameX="0" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0003" x="1923" y="778" width="24" height="16" frameX="0" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0004" x="1843" y="778" width="38" height="16" frameX="0" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0005" x="1843" y="778" width="38" height="16" frameX="0" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0006" x="1883" y="778" width="38" height="16" frameX="-14" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0007" x="1883" y="778" width="38" height="16" frameX="-14" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0008" x="1883" y="778" width="38" height="16" frameX="-28" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0009" x="1883" y="778" width="38" height="16" frameX="-28" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0010" x="1883" y="778" width="38" height="16" frameX="-42" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0011" x="1883" y="778" width="38" height="16" frameX="-42" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0012" x="1883" y="778" width="38" height="16" frameX="-56" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0013" x="1883" y="778" width="38" height="16" frameX="-56" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0014" x="1883" y="778" width="38" height="16" frameX="-70" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0015" x="1883" y="778" width="38" height="16" frameX="-70" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0016" x="1883" y="778" width="38" height="16" frameX="-84" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0017" x="1883" y="778" width="38" height="16" frameX="-84" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0018" x="1883" y="778" width="38" height="16" frameX="-98" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0019" x="1883" y="778" width="38" height="16" frameX="-98" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0020" x="1883" y="778" width="38" height="16" frameX="-98" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0021" x="1883" y="778" width="38" height="16" frameX="-112" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0022" x="1883" y="778" width="38" height="16" frameX="-112" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0023" x="1883" y="778" width="38" height="16" frameX="-126" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0024" x="1883" y="778" width="38" height="16" frameX="-126" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0025" x="1883" y="778" width="38" height="16" frameX="-140" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0026" x="1883" y="778" width="38" height="16" frameX="-140" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0027" x="1883" y="778" width="38" height="16" frameX="-154" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0028" x="1883" y="778" width="38" height="16" frameX="-154" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0029" x="1883" y="778" width="38" height="16" frameX="-168" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0030" x="1883" y="778" width="38" height="16" frameX="-168" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0031" x="1883" y="778" width="38" height="16" frameX="-182" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0032" x="1883" y="778" width="38" height="16" frameX="-182" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0033" x="1883" y="778" width="38" height="16" frameX="-196" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0034" x="1883" y="778" width="38" height="16" frameX="-196" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0035" x="1843" y="796" width="24" height="16" frameX="-210" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0036" x="1843" y="796" width="24" height="16" frameX="-210" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0037" x="1941" y="730" width="10" height="16" frameX="-224" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0038" x="1941" y="730" width="10" height="16" frameX="-224" frameY="0" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0039" x="2" y="2" width="0" height="0" frameX="-647" frameY="306" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="bar0040" x="2" y="2" width="0" height="0" frameX="-647" frameY="306" frameWidth="234" frameHeight="16"/>
+	<SubTexture name="barloading0000" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0001" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0002" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0003" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0004" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0005" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0006" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0007" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0008" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0009" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0010" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0011" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0012" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0013" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0014" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0015" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0016" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0017" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0018" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0019" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0020" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0021" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0022" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0023" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0024" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0025" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0026" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0027" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0028" x="1916" y="746" width="10" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0029" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0030" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0031" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0032" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0033" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0034" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0035" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0036" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0037" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0038" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0039" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0040" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0041" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0042" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0043" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0044" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0045" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0046" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0047" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0048" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0049" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0050" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0051" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0052" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0053" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0054" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0055" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0056" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0057" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0058" x="1904" y="762" width="46" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0059" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0060" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0061" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0062" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0063" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0064" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0065" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0066" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0067" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0068" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0069" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0070" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0071" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0072" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0073" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0074" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0075" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0076" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0077" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0078" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0079" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0080" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0081" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0082" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0083" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0084" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0085" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0086" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0087" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0088" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0089" x="1843" y="762" width="59" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0090" x="1843" y="746" width="71" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0091" x="1843" y="746" width="71" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0092" x="1843" y="746" width="71" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0093" x="1843" y="746" width="71" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0094" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0095" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0096" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0097" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0098" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0099" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0100" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0101" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0102" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0103" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0104" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0105" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0106" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0107" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0108" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0109" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0110" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0111" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0112" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0113" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0114" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0115" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0116" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0117" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0118" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0119" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0120" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0121" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0122" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0123" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0124" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0125" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0126" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0127" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0128" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0129" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0130" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0131" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0132" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0133" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0134" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0135" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0136" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0137" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0138" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0139" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0140" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0141" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0142" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0143" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0144" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0145" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0146" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0147" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0148" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0149" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0150" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0151" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0152" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0153" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0154" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0155" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0156" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0157" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0158" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0159" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0160" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0161" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0162" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0163" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0164" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0165" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0166" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0167" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0168" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0169" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0170" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0171" x="1843" y="730" width="96" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0172" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0173" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0174" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0175" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0176" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0177" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0178" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0179" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0180" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0181" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0182" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0183" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0184" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0185" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0186" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0187" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0188" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0189" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0190" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0191" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0192" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0193" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0194" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0195" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0196" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0197" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0198" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0199" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0200" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0201" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0202" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0203" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0204" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0205" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0206" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0207" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0208" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0209" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0210" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0211" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0212" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0213" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0214" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0215" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0216" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0217" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0218" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0219" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0220" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0221" x="1418" y="868" width="330" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0222" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0223" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0224" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0225" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0226" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0227" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0228" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0229" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0230" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0231" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0232" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0233" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0234" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0235" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0236" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0237" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0238" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0239" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0240" x="1418" y="900" width="281" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0241" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0242" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0243" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0244" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0245" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0246" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0247" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0248" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0249" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0250" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0251" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0252" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0253" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0254" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0255" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0256" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0257" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0258" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0259" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0260" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0261" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0262" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0263" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0264" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0265" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0266" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0267" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0268" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0269" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0270" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0271" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0272" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0273" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0274" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0275" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0276" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0277" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0278" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0279" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0280" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0281" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0282" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0283" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0284" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0285" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0286" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0287" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0288" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0289" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0290" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0291" x="1418" y="884" width="306" height="14" frameX="0" frameY="0" frameWidth="355" frameHeight="14"/>
+	<SubTexture name="barloading0292" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0293" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0294" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0295" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0296" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0297" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0298" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0299" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0300" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0301" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0302" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0303" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0304" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0305" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0306" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0307" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0308" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0309" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0310" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0311" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0312" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0313" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0314" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0315" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0316" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0317" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0318" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0319" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0320" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0321" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="barloading0322" x="1418" y="852" width="355" height="14"/>
+	<SubTexture name="load0000" x="1418" y="730" width="423" height="120"/>
+	<SubTexture name="bg0000" x="2" y="2" width="979" height="737"/>
+	<SubTexture name="welcome0000" x="983" y="2" width="972" height="726"/>
+</TextureAtlas>

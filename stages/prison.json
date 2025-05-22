@@ -125,10 +125,10 @@
 		},
 		{
 			"x": -1097,
-			"y": 646,
+			"y": 706,
 			"scale": [
-				1,
-				1
+				1.2,
+				1.2
 			],
 			"image": "prison/monitorFore",
 			"flipX": false,

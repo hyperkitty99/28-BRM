@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fis.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="FIS_DOWN instance 10000" x="2" y="553" width="387" height="387" frameX="0" frameY="-17" frameWidth="387" frameHeight="404"/>
+	<SubTexture name="FIS_DOWN instance 10001" x="2" y="553" width="387" height="387" frameX="0" frameY="-17" frameWidth="387" frameHeight="404"/>
+	<SubTexture name="FIS_DOWN instance 10002" x="983" y="457" width="360" height="404" frameX="-8" frameY="0" frameWidth="387" frameHeight="404"/>
+	<SubTexture name="FIS_DOWN instance 10003" x="983" y="457" width="360" height="404" frameX="-8" frameY="0" frameWidth="387" frameHeight="404"/>
+	<SubTexture name="FIS_IDLE instance 10000" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10001" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10002" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10003" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10004" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10005" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10006" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10007" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10008" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10009" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10010" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10011" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10012" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_IDLE instance 10013" x="1363" y="456" width="342" height="462"/>
+	<SubTexture name="FIS_LEFT instance 10000" x="627" y="2" width="369" height="446" frameX="0" frameY="-6" frameWidth="370" frameHeight="452"/>
+	<SubTexture name="FIS_LEFT instance 10001" x="627" y="2" width="369" height="446" frameX="0" frameY="-6" frameWidth="370" frameHeight="452"/>
+	<SubTexture name="FIS_LEFT instance 10002" x="1363" y="2" width="354" height="452" frameX="-16" frameY="0" frameWidth="370" frameHeight="452"/>
+	<SubTexture name="FIS_LEFT instance 10003" x="1363" y="2" width="354" height="452" frameX="-16" frameY="0" frameWidth="370" frameHeight="452"/>
+	<SubTexture name="FIS_RIGHT instance 10000" x="998" y="2" width="363" height="453" frameX="-8" frameY="0" frameWidth="371" frameHeight="454"/>
+	<SubTexture name="FIS_RIGHT instance 10001" x="998" y="2" width="363" height="453" frameX="-8" frameY="0" frameWidth="371" frameHeight="454"/>
+	<SubTexture name="FIS_RIGHT instance 10002" x="627" y="450" width="354" height="450" frameX="0" frameY="-4" frameWidth="371" frameHeight="454"/>
+	<SubTexture name="FIS_RIGHT instance 10003" x="627" y="450" width="354" height="450" frameX="0" frameY="-4" frameWidth="371" frameHeight="454"/>
+	<SubTexture name="FIS_UP instance 10000" x="320" y="2" width="305" height="549" frameX="-7" frameY="0" frameWidth="316" frameHeight="549"/>
+	<SubTexture name="FIS_UP instance 10001" x="320" y="2" width="305" height="549" frameX="-7" frameY="0" frameWidth="316" frameHeight="549"/>
+	<SubTexture name="FIS_UP instance 10002" x="2" y="2" width="316" height="534" frameX="0" frameY="-15" frameWidth="316" frameHeight="549"/>
+	<SubTexture name="FIS_UP instance 10003" x="2" y="2" width="316" height="534" frameX="0" frameY="-15" frameWidth="316" frameHeight="549"/>
+</TextureAtlas>

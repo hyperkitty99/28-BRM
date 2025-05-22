@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"offsets": [663, 44],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "FIS_IDLE"
+		},
+		{
+			"offsets": [723, 34],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "FIS_LEFT"
+		},
+		{
+			"offsets": [678, -21],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "FIS_DOWN"
+		},
+		{
+			"offsets": [637, 139],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "FIS_UP"
+		},
+		{
+			"offsets": [618, 35],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "FIS_RIGHT"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/fis",
+	"position": [670, 330],
+	"healthicon": "iccer",
+	"flip_x": false,
+	"healthbar_colors": [168, 199, 217],
+	"camera_position": [-670, -30],
+	"sing_duration": 4,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

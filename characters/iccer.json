@@ -1,49 +1,89 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [114, -121],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "idle"
+			"fps": 24,
+			"name": "idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [333, -162],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "left"
+			"fps": 24,
+			"name": "left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [128, -302],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "down"
+			"fps": 24,
+			"name": "down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [108, 120],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "up"
+			"fps": 24,
+			"name": "up",
+			"indices": []
 		},
 		{
-			"offsets": [105, -151],
 			"loop": false,
-			"fps": 24,
+			"offsets": [105, -151],
 			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"offsets": [-14, -324],
 			"indices": [],
-			"name": "right"
+			"fps": 24,
+			"anim": "idle-alt",
+			"loop": false,
+			"name": "FIS_IDLE"
+		},
+		{
+			"offsets": [41, -334],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "FIS_LEFT"
+		},
+		{
+			"offsets": [-2, -383],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "FIS_DOWN"
+		},
+		{
+			"offsets": [-38, -238],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "FIS_UP"
+		},
+		{
+			"offsets": [-56, -332],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "FIS_RIGHT"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
-	"image": "characters/iccer",
+	"image": "characters/iccer,characters/fis",
 	"position": [0, 0],
 	"healthicon": "iccer",
 	"flip_x": false,

@@ -53,9 +53,9 @@ function onCreatePost():Void {
     addSprite('static', [364, 239], [0.6145], 'mainmenu', true);
     addSprite('screen', [-11, 120], [0.61], 'screen');
     addSprite('monitor', [-11, -86], [0.625]);
-    addSprite('glow', [385, 690], [0.625], 'glow');
+    addSprite('glow', [385, 685], [0.625], 'glow');
+    getVar('glow').alpha = 0;
 
-    addSprite('tv light', [332, 206], [0.625]);
     addSprite('shadow', [679, 861], [1, 1]);
 
     addSprite('other', [-830, 720], [0.85], 'other');
@@ -81,7 +81,12 @@ function onCreatePost():Void {
     FlxG.camera.bgColor = 0xFF0A0E15;
 }
 
+var titleTimer:Float = 0;
 function onUpdatePost(elapsed:Float):Void {
+    titleTimer = (titleTimer + elapsed) % 2;
+
+	final timer = FlxEase.quadInOut(titleTimer >= 1 ? 2 - titleTimer : titleTimer);
+
     if (controls.BACK) {
         if (!zoomedIn) {
             MusicBeatState.switchState(new CustomState('BRM_TITLE_STATE'));
@@ -90,12 +95,19 @@ function onUpdatePost(elapsed:Float):Void {
         }
     }
 
-    if (controls.ACCEPT) {
+    if (globalStatic.get('firstTime')) {
+        glow.alpha = FlxMath.lerp(0.65, 0, timer);
+    }
+
+    if (FlxG.mouse.overlaps(getVar('tv dark')) && FlxG.mouse.justPressed) {
         zoomedIn = !zoomedIn;
     }
 
     if (FlxG.mouse.overlaps(getVar('glow')) && FlxG.mouse.justPressed) {
-        if (!tvOn) zoomedIn = !zoomedIn;
+        if(globalStatic.get('firstTime')) {
+            globalStatic.set('firstTime', false);
+            glow.alpha = 0;
+        }
         tvOn = !tvOn;
     }
 
@@ -124,14 +136,14 @@ function onUpdatePost(elapsed:Float):Void {
         disc.scale.x = disc.scale.y = FlxMath.lerp(disc.scale.x, 1.7, 2 * elapsed);
         if (tvOn) {
             tvOn = false;
-			PlayState.SONG = Song.loadFromJson('russophobia', 'russophobia');
-			PlayState.isStoryMode = false;
-            FlxG.switchState(new PlayState());
-            FlxTransitionableState.skipNextTransOut = FlxTransitionableState.skipNextTransIn = true;
+                PlayState.SONG = Song.loadFromJson('russophobia', 'russophobia');
+                PlayState.isStoryMode = false;
+                FlxG.switchState(new PlayState());
+                FlxTransitionableState.skipNextTransOut = FlxTransitionableState.skipNextTransIn = true;
         }
     }
 
-    getVar('light').visible = getVar('static').visible = getVar('tv light').visible = getVar('shadow').visible = tvOn;
+    getVar('light').visible = getVar('static').visible = getVar('shadow').visible = tvOn;
 
     FlxG.camera.scroll.y = FlxMath.lerp(FlxG.camera.scroll.y, zoomedIn ? 78.5 : 0, 10 * elapsed);
     FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, zoomedIn ? 1.85 : 0.5, 10 * elapsed);
