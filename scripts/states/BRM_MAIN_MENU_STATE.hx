@@ -18,6 +18,8 @@ var camScreen:FlxCamera;
 
 var thing:FlxRuntimeShader = createRuntimeShader('barrel');
 
+var insertedDVD:Bool = false;
+
 function onCreate():Void {
     camDoors = new FlxCamera();
     camScreen = new FlxCamera();
@@ -42,6 +44,13 @@ function createDoorsStuff():Void {
 
     addSprite('bar0', [500, 480.5], [0.625], 'pc/doors', true, camDoors);
     getVar('bar0').scale.set(0.535, 0.515);
+
+    addSprite('load', [415, 300], [0.625], 'pc/doors', false, camDoors);
+    getVar('load').scale.set(0.535, 0.515);
+
+    addSprite('barloading0', [450, 361], [0.625], 'pc/doors', false, camDoors);
+    getVar('barloading0').scale.set(0.535, 0.515);
+    getVar('barloading0').animation.stop();
 
     addSprite('screen', [-11, 120], [0.61], 'screen', false, camScreen);
     addSprite('monitor', [-11, -86], [0.625], 'mainmenu', false, camScreen);
@@ -119,6 +128,15 @@ function onUpdatePost(elapsed:Float):Void {
         }
     }
 
+    if (FlxG.keys.justPressed.Q) {
+        if (grabbedDVD) {
+            insertedDVD = !insertedDVD;
+            getVar('barloading0').animation.play('barloading0');
+            getVar('barloading0').animation.timeScale = FlxG.random.float(0.5, 2);
+            getVar('barloading0').animation.onFinish.add(loadSong);
+        }
+    }
+
     if (globalStatic.get('firstTime')) {
         glow.alpha = FlxMath.lerp(0.65, 0, timer);
     }
@@ -126,6 +144,8 @@ function onUpdatePost(elapsed:Float):Void {
     if (controls.ACCEPT) {
         zoomedIn = !zoomedIn;
     }
+
+    getVar('barloading0').visible = getVar('load').visible = grabbedDVD && insertedDVD && tvOn && pcFullySetup;
 
     if (FlxG.mouse.overlaps(getVar('glow')) && FlxG.mouse.justPressed) {
         if(globalStatic.get('firstTime')) {
@@ -187,13 +207,6 @@ function onUpdatePost(elapsed:Float):Void {
     if (grabbedDVD) {
         disc.setPosition(FlxMath.lerp(disc.x, (-FlxG.camera.scroll.x) + 1000, 2 * elapsed), FlxMath.lerp(disc.y, 1400, 2 * elapsed));
         disc.scale.x = disc.scale.y = FlxMath.lerp(disc.scale.x, 1.7, 2 * elapsed);
-        // if (tvOn) {
-        //     tvOn = false;
-        //     PlayState.SONG = Song.loadFromJson('russophobia', 'russophobia');
-        //     PlayState.isStoryMode = false;
-        //     FlxG.switchState(new PlayState());
-        //     FlxTransitionableState.skipNextTransOut = FlxTransitionableState.skipNextTransIn = true;
-        // }
     }
 
     getVar('bg').alpha = tvOn ? 1 : 0.00001;
@@ -207,6 +220,23 @@ function onUpdatePost(elapsed:Float):Void {
 
     thing.setFloat('distortionX', 0.6 - Math.abs((FlxG.camera.zoom - 1.85) / 2));
     thing.setFloat('distortionY', 0.9 - Math.abs((FlxG.camera.zoom - 1.85) / 2));
+}
+
+function loadSong():Void {
+    if (!zoomedIn) {
+        zoomedIn = true;
+
+        FlxTimer.wait(0.5, playSong);
+    } else {
+        playSong();
+    }
+}
+
+function playSong():Void {
+    PlayState.SONG = Song.loadFromJson('russophobia', 'russophobia');
+    PlayState.isStoryMode = false;
+    FlxG.switchState(new PlayState());
+    FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
 }
 
 function startPC(_:FlxTimer):Void {
