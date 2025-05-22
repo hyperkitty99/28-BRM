@@ -3,7 +3,7 @@ import flixel.math.FlxBasePoint;
 import flixel.FlxCameraFollowStyle;
 import substates.GameOverSubstate;
 import states.PlayState;
-import states.StoryMenuState;
+import states.MainMenuState;
 import states.FreeplayState;
 import backend.StageData;
 import flixel.addons.transition.FlxTransitionableState;
@@ -70,7 +70,7 @@ function onGameOver():Void {
         game.addBehindBF(black = new FlxSprite(-500, -500).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK));
         black.scrollFactor.set();
 
-        add(deathMonitor = new BGSprite('deathGraphic', game.boyfriend.x - 1100, game.boyfriend.y - 590, 0, 0, ['Symbol 1'], true));
+        add(deathMonitor = new BGSprite('deathGraphic', game.boyfriend.x - 950, game.boyfriend.y - 590, 0, 0, ['Symbol 1'], true));
         deathMonitor.animation.play('Symbol 1');
         deathMonitor.scale.set(0.95, 0.95);
         deathMonitor.alpha = 0;
@@ -121,10 +121,8 @@ function onUpdatePost(elapsed:Float):Void {
                     PlayState.seenCutscene = false;
                     PlayState.chartingMode = false;
             
-                    if (game.isStoryMode)
-                        MusicBeatState.switchState(new StoryMenuState());
-                    else
-                        MusicBeatState.switchState(new FreeplayState());
+                    MusicBeatState.switchState(new CustomState('BRM_MAIN_MENU_STATE'));
+                    FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
             
                     FlxG.sound.playMusic(Paths.music('freakyMenu'));
                 }

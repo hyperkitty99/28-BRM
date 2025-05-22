@@ -56,10 +56,13 @@ function createDoorsStuff():Void {
     addSprite('monitor', [-11, -86], [0.625], 'mainmenu', false, camScreen);
 
     getVar('doors').visible = getVar('bar0').visible = false;
+
+    getVar('barloading0').visible = getVar('load').visible = false;
 }
 
 var letimer:FlxTimer;
 var letimer2:FlxTimer;
+var letimer3:FlxTimer;
 var isPcStarting:Bool = false;
 var pcFullySetup:Bool = false;
 
@@ -110,8 +113,17 @@ function onCreatePost():Void {
     camScreen.scroll.y = FlxG.camera.scroll.y = 78.5;
     FlxG.camera.bgColor = 0xFF0A0E15;
 
+    if (globalStatic.get('goingBack')) {
+        FlxG.camera.zoom = 1.85;
+        zoomedIn = tvOn = pcFullySetup = grabbedDVD = insertedDVD = true;
+        isPcStarting = false;
+
+        globalStatic.set('goingBack', false);
+    }
+
     letimer = new FlxTimer();
     letimer2 = new FlxTimer();
+    letimer3 = new FlxTimer();
 }
 
 var titleTimer:Float = 0;
@@ -123,18 +135,30 @@ function onUpdatePost(elapsed:Float):Void {
     if (controls.BACK) {
         if (!zoomedIn) {
             MusicBeatState.switchState(new CustomState('BRM_TITLE_STATE'));
+            FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = false;
         } else {
             zoomedIn = false;
         }
     }
 
     if (FlxG.keys.justPressed.Q) {
-        if (grabbedDVD) {
+        if (grabbedDVD && tvOn && pcFullySetup) {
             insertedDVD = !insertedDVD;
-            getVar('barloading0').animation.play('barloading0');
-            getVar('barloading0').animation.timeScale = FlxG.random.float(0.5, 2);
-            getVar('barloading0').animation.onFinish.add(loadSong);
+
+            if (insertedDVD) {
+                getVar('barloading0').animation.play('barloading0');
+                getVar('barloading0').animation.timeScale = FlxG.random.float(0.5, 2);
+                getVar('barloading0').animation.onFinish.add(loadSong);
+                getVar('barloading0').visible = getVar('load').visible = true;
+            } else {
+                getVar('barloading0').animation.stop();
+                getVar('barloading0').visible = getVar('load').visible = false;
+            }
         }
+    }
+
+    if (FlxG.keys.justPressed.F4) {
+        playSong();
     }
 
     if (globalStatic.get('firstTime')) {
@@ -144,8 +168,6 @@ function onUpdatePost(elapsed:Float):Void {
     if (controls.ACCEPT) {
         zoomedIn = !zoomedIn;
     }
-
-    getVar('barloading0').visible = getVar('load').visible = grabbedDVD && insertedDVD && tvOn && pcFullySetup;
 
     if (FlxG.mouse.overlaps(getVar('glow')) && FlxG.mouse.justPressed) {
         if(globalStatic.get('firstTime')) {
@@ -226,17 +248,21 @@ function loadSong():Void {
     if (!zoomedIn) {
         zoomedIn = true;
 
-        FlxTimer.wait(0.5, playSong);
+        if (letimer3 != null) {
+            letimer3.destroy();
+        }
+        letimer3.start(0.5, playSong);
     } else {
         playSong();
     }
 }
 
-function playSong():Void {
+function playSong(?_:FlxTimer):Void {
     PlayState.SONG = Song.loadFromJson('russophobia', 'russophobia');
     PlayState.isStoryMode = false;
     FlxG.switchState(new PlayState());
     FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
+    globalStatic.set('goingBack', true);
 }
 
 function startPC(_:FlxTimer):Void {
