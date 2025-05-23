@@ -7,6 +7,13 @@ import openfl.display.BitmapData;
 import lime.graphics.Image;
 import openfl.Lib;
 import flixel.FlxObject;
+import backend.Highscore;
+import backend.Song;
+import backend.WeekData;
+import backend.Discord.DiscordClient;
+import backend.Mods;
+import states.LoadingState;
+import flixel.addons.transition.FlxTransitionableState;
 
 var skinPath:String = 'noteSkins/' + game.dad.curCharacter + '/';
 
@@ -109,4 +116,70 @@ function applyOpponentAlpha(value:Float):Void {
 
 function applyPlayerAlpha(value:Float):Void {
     playerBG.alpha = value;
+}
+
+function onEndSong():Void {
+	var percent:Float = ratingPercent;
+	if(Math.isNaN(percent)) percent = 0;
+	Highscore.saveScore(Song.loadedSongName, songScore, PlayState.storyDifficulty, percent);
+
+	playbackRate = 1;
+
+
+	if (PlayState.isStoryMode) {
+	    campaignScore += songScore;
+		campaignMisses += songMisses;
+
+		storyPlaylist.remove(storyPlaylist[0]);
+
+		if (storyPlaylist.length <= 0) {
+			Mods.loadTopMod();
+			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
+
+			canResync = false;
+			MusicBeatState.switchState(new StoryMenuState());
+
+			if(!ClientPrefs.getGameplaySetting('practice') && !ClientPrefs.getGameplaySetting('botplay')) {
+				StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
+				Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, PlayState.storyDifficulty);
+
+				FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
+				FlxG.save.flush();
+			}
+			changedDifficulty = false;
+		} else {
+			var difficulty:String = Difficulty.getFilePath();
+
+			trace('LOADING NEXT SONG');
+			trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
+
+			FlxTransitionableState.skipNextTransIn = true;
+			FlxTransitionableState.skipNextTransOut = true;
+			prevCamFollow = camFollow;
+
+			Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
+			FlxG.sound.music.stop();
+
+			canResync = false;
+			LoadingState.prepareToSong();
+			LoadingState.loadAndSwitchState(new PlayState(), false, false);
+		}
+	}
+	else
+	{
+		trace('WENT BACK TO FREEPLAY??');
+		Mods.loadTopMod();
+		#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
+
+        FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
+
+		canResync = false;
+		FlxG.switchState(new CustomState('BRM_MAIN_MENU_STATE'));
+		FlxG.sound.playMusic(Paths.music('freakyMenu'));
+		changedDifficulty = false;
+	}
+	transitioning = true;
+
+    return Function_Stop;
 }
