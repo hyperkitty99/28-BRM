@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="iccer-miss.png">
+	<SubTexture name="ICCER_MISS0000" x="826" y="2" width="776" height="666" frameX="-4" frameY="-16" frameWidth="826" frameHeight="682"/>
+	<SubTexture name="ICCER_MISS0001" x="2" y="2" width="822" height="679" frameX="-4" frameY="0" frameWidth="826" frameHeight="682"/>
+	<SubTexture name="ICCER_MISS0002" x="2" y="683" width="822" height="679" frameX="-4" frameY="0" frameWidth="826" frameHeight="682"/>
+	<SubTexture name="ICCER_MISS0003" x="2" y="1364" width="778" height="655" frameX="0" frameY="-25" frameWidth="826" frameHeight="682"/>
+	<SubTexture name="ICCER_MISS0004" x="826" y="670" width="778" height="655" frameX="0" frameY="-25" frameWidth="826" frameHeight="682"/>
+	<SubTexture name="ICCER_MISS0005" x="826" y="1327" width="778" height="655" frameX="0" frameY="-25" frameWidth="826" frameHeight="682"/>
+	<SubTexture name="ICCER_MISS0006" x="826" y="1327" width="778" height="655" frameX="0" frameY="-25" frameWidth="826" frameHeight="682"/>
+	<SubTexture name="ICCER_MISS0007" x="826" y="1327" width="778" height="655" frameX="0" frameY="-25" frameWidth="826" frameHeight="682"/>
+</TextureAtlas>

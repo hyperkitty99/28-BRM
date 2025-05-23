@@ -1,89 +1,57 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [114, -121],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
-			"loop": false,
 			"offsets": [333, -162],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "left",
-			"indices": []
+			"indices": [],
+			"name": "left"
 		},
 		{
-			"loop": false,
 			"offsets": [128, -302],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
+			"indices": [],
+			"name": "down"
 		},
 		{
-			"loop": false,
 			"offsets": [108, 120],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "up",
-			"indices": []
+			"indices": [],
+			"name": "up"
 		},
 		{
-			"loop": false,
 			"offsets": [105, -151],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "right",
-			"indices": []
+			"indices": [],
+			"name": "right"
 		},
 		{
-			"offsets": [-14, -324],
+			"offsets": [108, -135],
 			"indices": [],
 			"fps": 24,
-			"anim": "idle-alt",
+			"anim": "singRIGHTmiss",
 			"loop": false,
-			"name": "FIS_IDLE"
-		},
-		{
-			"offsets": [41, -334],
-			"indices": [],
-			"fps": 24,
-			"anim": "singLEFT-alt",
-			"loop": false,
-			"name": "FIS_LEFT"
-		},
-		{
-			"offsets": [-2, -383],
-			"indices": [],
-			"fps": 24,
-			"anim": "singDOWN-alt",
-			"loop": false,
-			"name": "FIS_DOWN"
-		},
-		{
-			"offsets": [-38, -238],
-			"indices": [],
-			"fps": 24,
-			"anim": "singUP-alt",
-			"loop": false,
-			"name": "FIS_UP"
-		},
-		{
-			"offsets": [-56, -332],
-			"indices": [],
-			"fps": 24,
-			"anim": "singRIGHT-alt",
-			"loop": false,
-			"name": "FIS_RIGHT"
+			"name": "ICCER_MISS"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
-	"image": "characters/iccer,characters/fis",
+	"image": "characters/iccer,characters/fis,characters/iccer-miss",
 	"position": [0, 0],
 	"healthicon": "iccer",
 	"flip_x": false,
