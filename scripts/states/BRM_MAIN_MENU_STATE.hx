@@ -105,7 +105,7 @@ function onCreatePost():Void {
     getVar('light').shader = lightSkew;
     getVar('light').scale.set(2, 2);
 
-    addSprite('shadow', [679, 861], [1, 1]);
+    addSprite('shadow', [679, 835], [1.385]);
 
     addSprite('other', [-830, 720], [0.85], 'other');
     getVar('other').origin.set(0, getVar('other').height);
@@ -248,21 +248,24 @@ function onUpdatePost(elapsed:Float):Void {
     getVar('confidentialFront').scale.x = (FlxG.camera.scroll.x / 1300) + 1;
 
     disc.color = tvOn ? FlxColor.WHITE : 0xFFBDBDBD;
-    disc.skew.x = (FlxG.camera.scroll.x / -7.2);
+    getVar('shadow').skew.x = disc.skew.x = (FlxG.camera.scroll.x / -7.2);
 
     if (FlxG.mouse.overlaps(disc) && FlxG.mouse.justPressed) {
         grabbedDVD = true;
     }
 
     if (grabbedDVD) {
-        disc.setPosition(FlxMath.lerp(disc.x, (-FlxG.camera.scroll.x) + 1000, 2 * elapsed), FlxMath.lerp(disc.y, 1400, 2 * elapsed));
+        disc.setPosition(FlxMath.lerp(disc.x, (-FlxG.camera.scroll.x) + 1000, 2 * elapsed), FlxMath.lerp(disc.y, 1300, 2 * elapsed));
         disc.scale.x = disc.scale.y = FlxMath.lerp(disc.scale.x, 1.7, 2 * elapsed);
 
-        discSide.setPosition(FlxMath.lerp(discSide.x, (-FlxG.camera.scroll.x) + 1000, 2 * elapsed), FlxMath.lerp(discSide.y, 1400, 2 * elapsed));
-        discSide.scale.y = FlxMath.lerp(discSide.scale.y, 1.7, 2 * elapsed);
+        discSide.setPosition(FlxMath.lerp(discSide.x, (-FlxG.camera.scroll.x) + 1000, 2 * elapsed), FlxMath.lerp(discSide.y, 1300, 2 * elapsed));
+        discSide.scale.y = disc.scale.x;
 
-        discFront.setPosition(FlxMath.lerp(discFront.x, (-FlxG.camera.scroll.x) + 1135, 2 * elapsed), FlxMath.lerp(discFront.y, 1584, 2 * elapsed));
-        discFront.scale.x = discFront.scale.y = FlxMath.lerp(discFront.scale.x, 1.7, 2 * elapsed);
+        discFront.setPosition(FlxMath.lerp(discFront.x, (-FlxG.camera.scroll.x) + 1233, 2 * elapsed), FlxMath.lerp(discFront.y, 1615, 2 * elapsed));
+        discFront.scale.x = discFront.scale.y = disc.scale.x;
+
+        getVar('shadow').setPosition(FlxMath.lerp(getVar('shadow').x, (-FlxG.camera.scroll.x) + 1300, 2 * elapsed), FlxMath.lerp(getVar('shadow').y, 1480, 2 * elapsed));
+        getVar('shadow').scale.x = getVar('shadow').scale.y = disc.scale.x;
     }
 
     getVar('bg').alpha = tvOn ? 1 : 0.00001;
