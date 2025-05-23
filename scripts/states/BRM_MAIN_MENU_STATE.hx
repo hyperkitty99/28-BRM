@@ -53,11 +53,6 @@ function createDoorsStuff():Void {
     getVar('barloading0').scale.set(0.535, 0.515);
     getVar('barloading0').animation.stop();
 
-    addSprite('dvd', [-13, 367], [0.5], 'monitor', false, camScreen);
-    addSprite('speaker', [770, 65], [0.5], 'monitor', false, camScreen);
-
-    addSprite('tv dark', [336, 182], [0.61], 'mainmenu', false, camScreen);
-
     addSprite('screen', [-11, 120], [0.61], 'screen', false, camScreen);
     addSprite('monitor', [278, -86], [0.625], 'monitor', false, camScreen);
 
@@ -100,6 +95,11 @@ function onCreatePost():Void {
 
     addSprite('tissue', [-132, 475], [0.4]);
     addSprite('kvas', [1176, 321], [0.4]);
+
+     addSprite('dvd', [-13, 367], [0.5], 'monitor');
+    addSprite('speaker', [770, 65], [0.5], 'monitor');
+
+    addSprite('tv dark', [336, 182], [0.61], 'mainmenu');
 
     addSprite('light', [-939, 1100], [1.6], 'light');
     getVar('light').shader = lightSkew;
