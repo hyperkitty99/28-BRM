@@ -125,7 +125,7 @@ function onUpdatePost(elapsed:Float):Void {
                     FlxG.switchState(new CustomState('BRM_MAIN_MENU_STATE'));
                     FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
             
-                    FlxG.sound.playMusic(Paths.music('freakyMenu'));
+                    FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
                 }
             }
 

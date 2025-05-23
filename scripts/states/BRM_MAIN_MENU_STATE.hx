@@ -5,6 +5,7 @@ import flixel.addons.display.FlxRuntimeShader;
 import flixel.addons.effects.FlxSkewedSprite;
 import states.PlayState;
 import backend.Song;
+import flixel.sound.FlxSound;
 
 var skew:FlxRuntimeShader = new FlxRuntimeShader(File.getContent(Paths.shaderFragment('skew')));
 var confSkew:FlxRuntimeShader = new FlxRuntimeShader(File.getContent(Paths.shaderFragment('skew')));
@@ -72,7 +73,29 @@ var letimer3:FlxTimer;
 var isPcStarting:Bool = false;
 var pcFullySetup:Bool = false;
 
+var music2:FlxSound;
+var music3:FlxSound;
+
+var music3Tween:FlxTween;
+
 function onCreatePost():Void {
+	music2 = new FlxSound();
+    music2.loadEmbedded(Paths.music('28 brm menuy 2'), true, true);
+	music2.volume = 0;
+	music2.play(false, FlxG.sound.music.time);
+	FlxG.sound.list.add(music2);
+
+    music3 = new FlxSound();
+    music3.loadEmbedded(Paths.music('28 brm menuy 3'), true, true);
+	music3.volume = 0;
+	music3.play(false, FlxG.sound.music.time);
+	FlxG.sound.list.add(music3);
+
+    if (!globalStatic.get('goingBack')) {
+        FlxTween.num(0.7, 0, 0.5, {ease: FlxEase.linear}, v -> FlxG.sound.music.volume = v);
+        FlxTween.num(0, 0.7, 0.5, {ease: FlxEase.linear}, v -> music2.volume = v);
+    }
+
     createDoorsStuff();
 
     addSprite('window', [516, -12], [0.15]);
@@ -141,6 +164,9 @@ function onCreatePost():Void {
         isPcStarting = false;
 
         globalStatic.set('goingBack', false);
+
+        music3.volume = 1;
+        FlxG.sound.music.volume = 0;
     }
 
     letimer = new FlxTimer();
@@ -156,6 +182,7 @@ function onUpdatePost(elapsed:Float):Void {
 
     if (controls.BACK) {
         if (!zoomedIn) {
+            FlxTween.num(0, 0.7, 1, {ease: FlxEase.linear}, v -> FlxG.sound.music.volume = v);
             MusicBeatState.switchState(new CustomState('BRM_TITLE_STATE'));
             FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = false;
         } else {
@@ -197,9 +224,18 @@ function onUpdatePost(elapsed:Float):Void {
             glow.alpha = 0;
         }
         tvOn = !tvOn;
+
+        if (music3Tween != null) {
+            music3Tween.destroy();
+        }
+
+        music3Tween = FlxTween.num(tvOn ? 0 : 0.7, tvOn ? 0.7 : 0, 0.5, {ease: FlxEase.linear}, v -> music3.volume = v);
+        FlxTween.num(tvOn ? 0.7 : 0, tvOn ? 0 : 0.7, 0.5, {ease: FlxEase.linear}, v -> music2.volume = v);
+
         if (tvOn) {
             zoomedIn = true;
         }
+
         isPcStarting = false;
 
         getVar('welcome').visible = tvOn;
@@ -316,7 +352,7 @@ function welcomeToTheUnderground(_:FlxTimer):Void {
     pcFullySetup = true;
     isPcStarting = false;
     getVar('welcome').visible = false;
-    FlxG.sound.play(Paths.sound('Microsoft Windows XP Startup Sound - Ballyweg'));
+    FlxG.sound.play(Paths.sound('Microsoft Windows XP Startup Sound - Ballyweg'), 0.3);
 }
 
 function addSprite(name:String, ?pos:Array<Float> = [0, 0], ?scroll:Array<Float> = [1, 1], ?prefix:String = null, ?loop:Bool = false, ?camera:FlxCamera):Void {

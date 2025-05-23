@@ -18,6 +18,8 @@ var rock:BGSprite;
 function onCreate():Void {
     if (!TitleState.initialized || FlxG.sound.music == null) FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 
+	Conductor.bpm = 100;
+
 	var barCam = new FlxCamera();
 	FlxG.cameras.add(barCam, false).bgColor = 0x00000000;
 
@@ -68,6 +70,9 @@ function onCreate():Void {
 }
 
 function onUpdate(elapsed:Float):Void {
+	if (FlxG.sound.music.volume < 0.7)
+		FlxG.sound.music.volume += 0.01 * elapsed;
+
 	FlxG.camera.scroll.y = FlxG.camera.scroll.y < 4750 ? FlxG.camera.scroll.y + 190 * elapsed : 0;
 
 	if (FlxG.sound.music != null) {
