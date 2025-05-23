@@ -132,8 +132,8 @@ function onBeatHit(beat:Int):Void {
 			ngSpr.visible = blackScreen.visible = logoBl.visible = true;
         case 24:
             ngSpr.visible = blackScreen.visible = false;
-            createText('pemza', 180);
-        case 27: addMoreText('pemza');
+            createText('pmza', 180);
+        case 27: addMoreText('pmza');
 		case 28: createText('28', 140);
 		case 29: addMoreText('BRM');
 		case 30: addMoreText('Season 1');
