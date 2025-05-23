@@ -121,7 +121,7 @@ function onUpdatePost(elapsed:Float):Void {
                     PlayState.seenCutscene = false;
                     PlayState.chartingMode = false;
             
-                    MusicBeatState.switchState(new CustomState('BRM_MAIN_MENU_STATE'));
+                    FlxG.switchState(new CustomState('BRM_MAIN_MENU_STATE'));
                     FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
             
                     FlxG.sound.playMusic(Paths.music('freakyMenu'));

@@ -1,0 +1,3 @@
+Flashes the camera
+
+Value 1: Duration

@@ -42,38 +42,6 @@
 		},
 		{
 			"loop": false,
-			"offsets": [-25, 54],
-			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "left miss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [-39, 9],
-			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "down miss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [-44, 70],
-			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "up miss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [-79, 46],
-			"anim": "singRIGHTmiss",
-			"fps": 24,
-			"name": "right miss",
-			"indices": []
-		},
-		{
-			"loop": false,
 			"offsets": [17, 63],
 			"anim": "firstDeath",
 			"fps": 24,
@@ -95,11 +63,51 @@
 			"fps": 24,
 			"name": "deathConfirm",
 			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-25, 54],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "left miss",
+			"indices": [0, 1, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+		},
+		{
+			"loop": false,
+			"offsets": [-39, 9],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "down miss",
+			"indices": [0, 1, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+		},
+		{
+			"loop": false,
+			"offsets": [-44, 70],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "up miss",
+			"indices": [0, 1, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+		},
+		{
+			"loop": false,
+			"offsets": [-79, 46],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "right miss",
+			"indices": [0, 1, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+		},
+		{
+			"offsets": [-69, 158],
+			"indices": [0, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+			"fps": 24,
+			"anim": "error",
+			"loop": false,
+			"name": "error"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
-	"image": "characters/fys,characters/fys-dead",
+	"image": "characters/fys,characters/fys-dead,characters/fys-error",
 	"position": [0, 350],
 	"healthicon": "fys",
 	"flip_x": true,

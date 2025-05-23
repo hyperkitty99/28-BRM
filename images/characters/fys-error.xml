@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fys-error.png">
+	<SubTexture name="error0000" x="2" y="2" width="289" height="580" frameX="0" frameY="0" frameWidth="304" frameHeight="581"/>
+	<SubTexture name="error0001" x="2" y="2" width="289" height="580" frameX="0" frameY="0" frameWidth="304" frameHeight="581"/>
+	<SubTexture name="error0002" x="293" y="2" width="304" height="526" frameX="0" frameY="-55" frameWidth="304" frameHeight="581"/>
+	<SubTexture name="error0003" x="293" y="2" width="304" height="526" frameX="0" frameY="-55" frameWidth="304" frameHeight="581"/>
+</TextureAtlas>
