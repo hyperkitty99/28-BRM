@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="table.png">
+<TextureAtlas imagePath="discTop.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Symbol 1 instance 10000" x="2" y="2" width="5042" height="575"/>
+	<SubTexture name="discTop instance 10000" x="2" y="2" width="560" height="185"/>
 </TextureAtlas>

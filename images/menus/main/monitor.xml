@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="monitor.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="monitor0000" x="2" y="2" width="731" height="850"/>
+	<SubTexture name="dvd0000" x="735" y="649" width="429" height="349"/>
+	<SubTexture name="speaker0000" x="735" y="2" width="459" height="645"/>
+</TextureAtlas>

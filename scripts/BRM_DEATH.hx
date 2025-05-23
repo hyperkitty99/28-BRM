@@ -62,6 +62,7 @@ function onGameOver():Void {
 		add(camFollow);
 
         defaultCamZoom = 1.85;
+        cameraSpeed = 1;
 
         FlxTween.num(1.85, 1, 1, {ease: FlxEase.circInOut, startDelay: 2}, (v) -> defaultCamZoom = v);
 

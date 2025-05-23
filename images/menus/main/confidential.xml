@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="confidential.png">
+	<SubTexture name="confidentialFront0000" x="385" y="319" width="363" height="95"/>
+	<SubTexture name="confidentialSide0000" x="2" y="319" width="381" height="178"/>
+	<SubTexture name="confidentialTop0000" x="2" y="2" width="734" height="315"/>
+</TextureAtlas>

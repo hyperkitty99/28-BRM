@@ -7,6 +7,7 @@ import states.PlayState;
 import backend.Song;
 
 var skew:FlxRuntimeShader = new FlxRuntimeShader(File.getContent(Paths.shaderFragment('skew')));
+var confSkew:FlxRuntimeShader = new FlxRuntimeShader(File.getContent(Paths.shaderFragment('skew')));
 var lightSkew:FlxRuntimeShader = new FlxRuntimeShader(File.getContent(Paths.shaderFragment('skew')));
 
 var zoomedIn:Bool = false;
@@ -52,12 +53,22 @@ function createDoorsStuff():Void {
     getVar('barloading0').scale.set(0.535, 0.515);
     getVar('barloading0').animation.stop();
 
+    addSprite('dvd', [-13, 367], [0.5], 'monitor', false, camScreen);
+    addSprite('speaker', [770, 65], [0.5], 'monitor', false, camScreen);
+
+    addSprite('tv dark', [336, 182], [0.61], 'mainmenu', false, camScreen);
+
     addSprite('screen', [-11, 120], [0.61], 'screen', false, camScreen);
-    addSprite('monitor', [-11, -86], [0.625], 'mainmenu', false, camScreen);
+    addSprite('monitor', [278, -86], [0.625], 'monitor', false, camScreen);
 
     getVar('doors').visible = getVar('bar0').visible = false;
 
     getVar('barloading0').visible = getVar('load').visible = false;
+
+    addSprite('glow', [385, 685], [0.625], 'glow', false, camScreen);
+    getVar('glow').alpha = 0;
+
+    addSprite('icon', [107, 730], [0.78], 'mainmenu', false, camScreen);
 }
 
 var letimer:FlxTimer;
@@ -77,16 +88,22 @@ function onCreatePost():Void {
     getVar('table').shader = skew;
     getVar('table').scale.set(2, 2);
 
+    addSprite('confidentialTop', [1150, 875], [1.3], 'confidentialTop');
+    getVar('confidentialTop').shader = confSkew;
+    getVar('confidentialTop').scale.set(2, 2);
+
+    addSprite('confidentialSide', [1285, 763], [0.75], 'confidential');
+    getVar('confidentialSide').origin.x = 0;
+
+    addSprite('confidentialFront', [1645, 850], [1.15], 'confidential');
+    getVar('confidentialFront').origin.x = 0;
+
     addSprite('tissue', [-132, 475], [0.4]);
     addSprite('kvas', [1176, 321], [0.4]);
-    addSprite('tv dark', [336, 182], [0.61]);
 
     addSprite('light', [-939, 1100], [1.6], 'light');
     getVar('light').shader = lightSkew;
     getVar('light').scale.set(2, 2);
-
-    addSprite('glow', [385, 685], [0.625], 'glow');
-    getVar('glow').alpha = 0;
 
     addSprite('shadow', [679, 861], [1, 1]);
 
@@ -98,12 +115,17 @@ function onCreatePost():Void {
     
     addSprite('bud zdorov', [-790, 655], [0.885], 'bud zdorov');
     addSprite('drink', [-537, 260], [0.84]);
-    addSprite('icon', [107, 730], [0.78]);
-    addSprite('books', [1233, 667], [0.8]);
-    addSprite('ffb', [1513, 103], [0.8]);
+    addSprite('books', [1283, 667], [0.83]);
+    addSprite('ffb', [1563, 103], [0.83]);
 
-    addSprite('disc', [685, 851], [0.9], 'disc');
-    getVar('disc').origin.set(0, 0);
+    addSprite('discTop', [685, 821], [0.9], 'discTop');
+    getVar('discTop').origin.set(0, 0);
+
+    addSprite('discSide', [685, 821], [0.9], 'discSide');
+    getVar('discSide').origin.set(0, 0);
+
+    addSprite('discFront', [820, 1005], [1.385], 'discFront');
+    getVar('discFront').origin.set(0, 0);
 
     for (member in members) {
         member.x += 16;
@@ -210,14 +232,20 @@ function onUpdatePost(elapsed:Float):Void {
         if (FlxG.random.bool(100 / ClientPrefs.data.framerate)) FlxG.sound.play(Paths.sound('WHAT'));
     }
 
+    var disc = getVar('discTop');
+    var discSide = getVar('discSide');
+    var discFront = getVar('discFront');
+
     getVar('bud zdorov').skew.x = (FlxG.camera.scroll.x / -6.3);
+    discSide.scale.x = (-FlxG.camera.scroll.x / 275) + discSide.scale.y;
     lightSkew.setFloat('skew', (FlxG.camera.scroll.x / 650) / 2.6);
     skew.setFloat('skew', (FlxG.camera.scroll.x / 1280) / 2.5);
+    confSkew.setFloat('skew', (FlxG.camera.scroll.x / 800));
 
     getVar('long').scale.x = (FlxG.camera.scroll.x / 1050) + 1;
     getVar('other').scale.x = (FlxG.camera.scroll.x / getVar('other').x) / 1.6 + 1;
-
-    var disc = getVar('disc');
+    getVar('confidentialSide').scale.x = (-FlxG.camera.scroll.x / 900) + 1;
+    getVar('confidentialFront').scale.x = (FlxG.camera.scroll.x / 1300) + 1;
 
     disc.color = tvOn ? FlxColor.WHITE : 0xFFBDBDBD;
     disc.skew.x = (FlxG.camera.scroll.x / -7.2);
@@ -229,6 +257,12 @@ function onUpdatePost(elapsed:Float):Void {
     if (grabbedDVD) {
         disc.setPosition(FlxMath.lerp(disc.x, (-FlxG.camera.scroll.x) + 1000, 2 * elapsed), FlxMath.lerp(disc.y, 1400, 2 * elapsed));
         disc.scale.x = disc.scale.y = FlxMath.lerp(disc.scale.x, 1.7, 2 * elapsed);
+
+        discSide.setPosition(FlxMath.lerp(discSide.x, (-FlxG.camera.scroll.x) + 1000, 2 * elapsed), FlxMath.lerp(discSide.y, 1400, 2 * elapsed));
+        discSide.scale.y = FlxMath.lerp(discSide.scale.y, 1.7, 2 * elapsed);
+
+        discFront.setPosition(FlxMath.lerp(discFront.x, (-FlxG.camera.scroll.x) + 1135, 2 * elapsed), FlxMath.lerp(discFront.y, 1584, 2 * elapsed));
+        discFront.scale.x = discFront.scale.y = FlxMath.lerp(discFront.scale.x, 1.7, 2 * elapsed);
     }
 
     getVar('bg').alpha = tvOn ? 1 : 0.00001;
