@@ -65,7 +65,9 @@ function increaseHP():Void {
 
 function onCreate():Void {
     add(healthBG = new BGSprite('healthMonitor', 720, 482, 0, 0, ['healthMonitor'], false));
+    setVar('healthBG', healthBG);
     add(fysIcon = new BGSprite('healthMonitor', 913, 580, 0, 0, ['fys', 'dead'], false));
+    setVar('fysIcon', fysIcon);
 
     for (i in 0...3) {
         var heartSpr = new BGSprite('healthMonitor', 780 + (i * 35), 645, 0, 0, ['heart', 'heart half', 'no heart']);
@@ -77,6 +79,8 @@ function onCreate():Void {
         displayHearts.push(heartSpr);
         add(displayHearts[i]);
     }
+
+    setVar('displayHearts', displayHearts);
 
     for (item in [healthBG, fysIcon]) {
         item.scale.set(0.75, 0.75);

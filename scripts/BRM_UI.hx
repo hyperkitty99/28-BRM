@@ -24,20 +24,24 @@ var debugMode:Bool = false;
 var camBG:FlxCamera;
 var bg:BGSprite;
 
+var storedFilters:Array<ShaderFilter> = [];
+
 function onCreate():Void {
     camBG = new FlxCamera();
     camBG.bgColor = 0x00000000;
     FlxG.cameras.add(camBG, false);
 
-    camGame.filters = camHUD.filters = [new ShaderFilter(createRuntimeShader('barrel4by3')), new ShaderFilter(createRuntimeShader('ntsc'))];
+    camGame.filters = camHUD.filters = storedFilters = [new ShaderFilter(createRuntimeShader('barrel4by3')), new ShaderFilter(createRuntimeShader('ntsc'))];
 
     var skinNotNull:Bool = Paths.image(skinPath + 'strumBG') != null;
-    add(opponentBG = new BGSprite(skinNotNull ? skinPath + 'strumBG' : 'strumBG', 80, 0));
+    add(opponentBG = new BGSprite(skinNotNull ? skinPath + 'strumBG' : 'strumBG', 225, 30));
     opponentBG.scale.set(0.58, 0.68);
+    opponentBG.updateHitbox();
     opponentBG.cameras = [game.camHUD];
 
-    add(playerBG = new BGSprite('strumBG', 495, 70));
+    add(playerBG = new BGSprite('strumBG', 663, 88));
     playerBG.scale.set(0.54, 0.54);
+    playerBG.updateHitbox();
     playerBG.cameras = [game.camHUD];
 
     add(bg = new BGSprite('menus/main/screenClose'));
@@ -59,6 +63,35 @@ function onCreate():Void {
 
 //     return Function_Stop;
 // }
+
+
+var toggled:Bool = true;
+function toggleEffect():Void {
+    toggled = !toggled;
+    bg.visible = toggled;
+    
+    camGame.filters = camHUD.filters = toggled ? storedFilters : [];
+
+    opponentBG.x = toggled ? 225 : 85;
+    playerBG.x = toggled ? 663 : 792;
+
+    var val = toggled ? -150 : 150;
+
+    getVar('healthBG').x += val;
+    getVar('fysIcon').x += val;
+
+    for (heart in getVar('displayHearts')) {
+        heart.x += val;
+    }
+
+    for (i in 0...opponentStrums.members.length) {
+        opponentStrums.members[i].x += toggled ? 140 : -140;
+    }
+
+    for (i in 0...playerStrums.members.length) {
+        playerStrums.members[i].x -=  toggled ? 130 : -130;
+    }
+}
 
 function opponentNoteHit():Void {
     vocals.volume = 1;
@@ -107,6 +140,10 @@ function onUpdatePost(elapsed:Float):Void {
 
     for (splash in grpNoteSplashes) {
         splash.scale.x = splash.scale.y = 0.65;
+    }
+
+    if (FlxG.keys.justPressed.F6) {
+        toggleEffect();
     }
 }
 
