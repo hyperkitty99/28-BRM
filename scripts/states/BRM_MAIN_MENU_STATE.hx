@@ -225,6 +225,12 @@ function onUpdatePost(elapsed:Float):Void {
         }
         tvOn = !tvOn;
 
+        if (insertedDVD) {
+            insertedDVD = false;
+            getVar('barloading0').animation.stop();
+            getVar('barloading0').visible = getVar('load').visible = false;
+        }
+
         if (music3Tween != null) {
             music3Tween.destroy();
         }
@@ -236,7 +242,7 @@ function onUpdatePost(elapsed:Float):Void {
             zoomedIn = true;
         }
 
-        isPcStarting = false;
+        isPcStarting = pcFullySetup = false;
 
         getVar('welcome').visible = tvOn;
 
