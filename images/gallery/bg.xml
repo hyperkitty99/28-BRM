@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bg.png">
+	<SubTexture name="bg0000" x="2" y="1358" width="2951" height="583"/>
+	<SubTexture name="building0000" x="2" y="2" width="1977" height="1354"/>
+	<SubTexture name="clouds0000" x="2" y="1943" width="2801" height="451"/>
+	<SubTexture name="road0000" x="1981" y="2" width="1628" height="506"/>
+	<SubTexture name="sun0000" x="2805" y="1943" width="62" height="81"/>
+</TextureAtlas>

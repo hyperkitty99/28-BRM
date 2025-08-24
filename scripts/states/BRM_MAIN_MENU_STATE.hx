@@ -6,6 +6,7 @@ import flixel.addons.effects.FlxSkewedSprite;
 import states.PlayState;
 import backend.Song;
 import flixel.sound.FlxSound;
+import states.editors.MasterEditorMenu;
 
 var skew:FlxRuntimeShader = new FlxRuntimeShader(File.getContent(Paths.shaderFragment('skew')));
 var confSkew:FlxRuntimeShader = new FlxRuntimeShader(File.getContent(Paths.shaderFragment('skew')));
@@ -321,6 +322,12 @@ function onUpdatePost(elapsed:Float):Void {
 
     thing.setFloat('distortionX', 0.6 - Math.abs((FlxG.camera.zoom - 1.85) / 2));
     thing.setFloat('distortionY', 0.9 - Math.abs((FlxG.camera.zoom - 1.85) / 2));
+
+
+    if (controls.justPressed('debug_1'))
+	{
+		MusicBeatState.switchState(new MasterEditorMenu());
+	}
 }
 
 function loadSong():Void {
